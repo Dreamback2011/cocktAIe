@@ -1,0 +1,2704 @@
+[
+  {
+    "Name": "Aged Rum",
+    "Category": "Base Spirit",
+    "Description": "Oak-aged rum with vanilla, spice, and dried fruit notes, bridges rum and whiskey profiles",
+    "Recipe": "N/A",
+    "Energy": 2,
+    "Tension": 3,
+    "Control": 4,
+    "Need": [
+      "comfort",
+      "maturity",
+      "warmth"
+    ]
+  },
+  {
+    "Name": "Aquavit",
+    "Category": "Base Spirit",
+    "Description": "Nordic spirit flavored with caraway and dill, savory and polarizing",
+    "Recipe": "N/A",
+    "Energy": 3,
+    "Tension": 5,
+    "Control": 2,
+    "Need": [
+      "novelty",
+      "identity",
+      "provocation"
+    ]
+  },
+  {
+    "Name": "Armagnac",
+    "Category": "Base Spirit",
+    "Description": "Rustic grape brandy with heavier body and less polish than cognac",
+    "Recipe": "N/A",
+    "Energy": 2,
+    "Tension": 3,
+    "Control": 3,
+    "Need": [
+      "depth",
+      "earthiness",
+      "intimacy"
+    ]
+  },
+  {
+    "Name": "Baijiu (Light Aroma)",
+    "Category": "Base Spirit",
+    "Description": "Light-aroma Chinese baijiu with high volatility and estery lift",
+    "Recipe": "N/A",
+    "Energy": 5,
+    "Tension": 5,
+    "Control": 1,
+    "Need": [
+      "shock",
+      "cultural edge",
+      "disruption"
+    ]
+  },
+  {
+    "Name": "Bourbon",
+    "Category": "Base Spirit",
+    "Description": "American whiskey with vanilla, caramel, and oak dominance",
+    "Recipe": "N/A",
+    "Energy": 2,
+    "Tension": 3,
+    "Control": 4,
+    "Need": [
+      "grounding",
+      "warmth",
+      "tradition"
+    ]
+  },
+  {
+    "Name": "Calvados",
+    "Category": "Base Spirit",
+    "Description": "Apple-based brandy with fresh fruit acidity and oxidative notes",
+    "Recipe": "N/A",
+    "Energy": 3,
+    "Tension": 3,
+    "Control": 4,
+    "Need": [
+      "nostalgia",
+      "seasonality",
+      "elegance"
+    ]
+  },
+  {
+    "Name": "Cognac",
+    "Category": "Base Spirit",
+    "Description": "Aged grape brandy with elegance and rounded aromatics",
+    "Recipe": "N/A",
+    "Energy": 2,
+    "Tension": 2,
+    "Control": 5,
+    "Need": [
+      "elegance",
+      "reflection",
+      "assurance"
+    ]
+  },
+  {
+    "Name": "Dark Rum",
+    "Category": "Base Spirit",
+    "Description": "Molasses-forward rum with rich caramel and spice notes",
+    "Recipe": "N/A",
+    "Energy": 3,
+    "Tension": 3,
+    "Control": 3,
+    "Need": [
+      "comfort",
+      "depth",
+      "indulgence"
+    ]
+  },
+  {
+    "Name": "Gin",
+    "Category": "Base Spirit",
+    "Description": "Botanical-driven spirit, dry and aromatic, emphasizes clarity, structure, and definition",
+    "Recipe": "N/A",
+    "Energy": 3,
+    "Tension": 2,
+    "Control": 4,
+    "Need": [
+      "clarity",
+      "focus",
+      "calm"
+    ]
+  },
+  {
+    "Name": "Irish Whiskey",
+    "Category": "Base Spirit",
+    "Description": "Triple-distilled whiskey, smooth, soft, and approachable with low edge",
+    "Recipe": "N/A",
+    "Energy": 2,
+    "Tension": 1,
+    "Control": 4,
+    "Need": [
+      "ease",
+      "approachability",
+      "relaxation"
+    ]
+  },
+  {
+    "Name": "Japanese Whisky",
+    "Category": "Base Spirit",
+    "Description": "Refined whisky style emphasizing balance, subtlety, and precision over power",
+    "Recipe": "N/A",
+    "Energy": 2,
+    "Tension": 2,
+    "Control": 5,
+    "Need": [
+      "harmony",
+      "precision",
+      "calm focus"
+    ]
+  },
+  {
+    "Name": "London Dry Gin",
+    "Category": "Base Spirit",
+    "Description": "Classic dry-style gin with dominant juniper and restrained sweetness, high structural discipline",
+    "Recipe": "N/A",
+    "Energy": 3,
+    "Tension": 2,
+    "Control": 5,
+    "Need": [
+      "discipline",
+      "clarity",
+      "authority"
+    ]
+  },
+  {
+    "Name": "Mezcal",
+    "Category": "Base Spirit",
+    "Description": "Smoky agave spirit with strong identity and mineral depth",
+    "Recipe": "N/A",
+    "Energy": 3,
+    "Tension": 5,
+    "Control": 2,
+    "Need": [
+      "introspection",
+      "complexity",
+      "rebellion"
+    ]
+  },
+  {
+    "Name": "Navy Strength Gin",
+    "Category": "Base Spirit",
+    "Description": "High-proof gin with amplified botanicals and alcohol intensity",
+    "Recipe": "N/A",
+    "Energy": 5,
+    "Tension": 4,
+    "Control": 3,
+    "Need": [
+      "intensity",
+      "confidence",
+      "command"
+    ]
+  },
+  {
+    "Name": "Overproof Rum",
+    "Category": "Base Spirit",
+    "Description": "Extremely high-proof rum, volatile and aggressive, used in small quantities for lift",
+    "Recipe": "N/A",
+    "Energy": 5,
+    "Tension": 5,
+    "Control": 1,
+    "Need": [
+      "chaos",
+      "excitement",
+      "recklessness"
+    ]
+  },
+  {
+    "Name": "Pisco",
+    "Category": "Base Spirit",
+    "Description": "Unaged grape brandy, floral and expressive, highly reactive with citrus",
+    "Recipe": "N/A",
+    "Energy": 4,
+    "Tension": 4,
+    "Control": 3,
+    "Need": [
+      "brightness",
+      "openness",
+      "celebration"
+    ]
+  },
+  {
+    "Name": "Rye Whiskey",
+    "Category": "Base Spirit",
+    "Description": "Dry and spicy whiskey with sharp aromatic edges",
+    "Recipe": "N/A",
+    "Energy": 3,
+    "Tension": 4,
+    "Control": 3,
+    "Need": [
+      "alertness",
+      "assertiveness",
+      "edge"
+    ]
+  },
+  {
+    "Name": "Scotch Whisky",
+    "Category": "Base Spirit",
+    "Description": "Malt-forward whisky ranging from floral to heavily peated",
+    "Recipe": "N/A",
+    "Energy": 2,
+    "Tension": 4,
+    "Control": 4,
+    "Need": [
+      "depth",
+      "solitude",
+      "contemplation"
+    ]
+  },
+  {
+    "Name": "Shochu",
+    "Category": "Base Spirit",
+    "Description": "Low-proof Japanese spirit, restrained aroma, high drinkability",
+    "Recipe": "N/A",
+    "Energy": 1,
+    "Tension": 1,
+    "Control": 5,
+    "Need": [
+      "restraint",
+      "sobriety",
+      "long conversation"
+    ]
+  },
+  {
+    "Name": "Soju",
+    "Category": "Base Spirit",
+    "Description": "Neutral, low-proof Korean spirit, minimal flavor impact",
+    "Recipe": "N/A",
+    "Energy": 1,
+    "Tension": 1,
+    "Control": 5,
+    "Need": [
+      "social ease",
+      "group bonding",
+      "accessibility"
+    ]
+  },
+  {
+    "Name": "Tequila Blanco",
+    "Category": "Base Spirit",
+    "Description": "Unaged agave spirit, bright, vegetal, and acid-reactive",
+    "Recipe": "N/A",
+    "Energy": 4,
+    "Tension": 4,
+    "Control": 3,
+    "Need": [
+      "excitement",
+      "boldness",
+      "social energy"
+    ]
+  },
+  {
+    "Name": "Vodka",
+    "Category": "Base Spirit",
+    "Description": "Neutral spirit with minimal aroma, used to suppress base flavor and highlight modifiers",
+    "Recipe": "N/A",
+    "Energy": 2,
+    "Tension": 1,
+    "Control": 5,
+    "Need": [
+      "control",
+      "cleanliness",
+      "stability"
+    ]
+  },
+  {
+    "Name": "White Rum",
+    "Category": "Base Spirit",
+    "Description": "Light-bodied rum with subtle sweetness and high mixability",
+    "Recipe": "N/A",
+    "Energy": 4,
+    "Tension": 3,
+    "Control": 3,
+    "Need": [
+      "refresh",
+      "freedom",
+      "sociability"
+    ]
+  },
+  {
+    "Name": "Agave Syrup",
+    "Category": "Modifier",
+    "Description": "Clean, rounded sweetness; pairs naturally with agave spirits.",
+    "Recipe": "N/A",
+    "Energy": 1,
+    "Tension": 1,
+    "Control": 4,
+    "Need": [
+      "ease",
+      "smoothness",
+      "approachability"
+    ]
+  },
+  {
+    "Name": "Amaro",
+    "Category": "Modifier",
+    "Description": "Herbal bitter-sweet liqueur with digestive depth",
+    "Recipe": "N/A",
+    "Energy": 2,
+    "Tension": 4,
+    "Control": 4,
+    "Need": [
+      "complexity",
+      "introspection",
+      "closure"
+    ]
+  },
+  {
+    "Name": "Amaro (General)",
+    "Category": "Modifier",
+    "Description": "Herbal bitter-sweet family; adds medicinal depth and long finish.",
+    "Recipe": "N/A",
+    "Energy": 2,
+    "Tension": 4,
+    "Control": 4,
+    "Need": [
+      "complexity",
+      "closure",
+      "introspection"
+    ]
+  },
+  {
+    "Name": "Amontillado Sherry",
+    "Category": "Modifier",
+    "Description": "Oxidative sherry; nutty depth, bridges dry and rich styles.",
+    "Recipe": "N/A",
+    "Energy": 1,
+    "Tension": 3,
+    "Control": 4,
+    "Need": [
+      "depth",
+      "reflection",
+      "comfort"
+    ]
+  },
+  {
+    "Name": "Angostura Bitters",
+    "Category": "Modifier",
+    "Description": "Highly concentrated bitters used for structure correction",
+    "Recipe": "N/A",
+    "Energy": 1,
+    "Tension": 4,
+    "Control": 5,
+    "Need": [
+      "stability",
+      "order",
+      "finish"
+    ]
+  },
+  {
+    "Name": "Aperol",
+    "Category": "Modifier",
+    "Description": "Gentler aperitivo; orange-forward sweetness with mild bitterness.",
+    "Recipe": "N/A",
+    "Energy": 3,
+    "Tension": 3,
+    "Control": 3,
+    "Need": [
+      "lightness",
+      "social ease",
+      "playfulness"
+    ]
+  },
+  {
+    "Name": "Bianco Vermouth",
+    "Category": "Modifier",
+    "Description": "White, semi-sweet vermouth; soft floral sweetness without heavy caramel notes.",
+    "Recipe": "N/A",
+    "Energy": 2,
+    "Tension": 2,
+    "Control": 4,
+    "Need": [
+      "ease",
+      "balance",
+      "approachability"
+    ]
+  },
+  {
+    "Name": "Campari",
+    "Category": "Modifier",
+    "Description": "Iconic bitter; red-fruit bitterness that creates strong tension and memory.",
+    "Recipe": "N/A",
+    "Energy": 2,
+    "Tension": 5,
+    "Control": 3,
+    "Need": [
+      "character",
+      "maturity",
+      "edge"
+    ]
+  },
+  {
+    "Name": "Celery Bitters",
+    "Category": "Modifier",
+    "Description": "Savory-green accent; sharpens savory cocktails and cuts sweetness.",
+    "Recipe": "N/A",
+    "Energy": 2,
+    "Tension": 5,
+    "Control": 3,
+    "Need": [
+      "focus",
+      "novelty",
+      "edge"
+    ]
+  },
+  {
+    "Name": "Chartreuse (Herbal Liqueur)",
+    "Category": "Modifier",
+    "Description": "High-intensity alpine herbs; turns simple structures into signature drinks.",
+    "Recipe": "N/A",
+    "Energy": 4,
+    "Tension": 5,
+    "Control": 2,
+    "Need": [
+      "intensity",
+      "mystery",
+      "transcendence"
+    ]
+  },
+  {
+    "Name": "Chocolate Bitters",
+    "Category": "Modifier",
+    "Description": "Cacao bitterness; deepens brown-spirit drinks with dessert tension.",
+    "Recipe": "N/A",
+    "Energy": 1,
+    "Tension": 4,
+    "Control": 4,
+    "Need": [
+      "indulgence",
+      "depth",
+      "comfort"
+    ]
+  },
+  {
+    "Name": "Curacao",
+    "Category": "Modifier",
+    "Description": "Orange liqueur with deeper peel/spice notes than typical triple sec.",
+    "Recipe": "N/A",
+    "Energy": 3,
+    "Tension": 3,
+    "Control": 3,
+    "Need": [
+      "nostalgia",
+      "warmth",
+      "playfulness"
+    ]
+  },
+  {
+    "Name": "Dry Vermouth",
+    "Category": "Modifier",
+    "Description": "Fortified wine; adds dryness, herb lift, and structure (Martini backbone).",
+    "Recipe": "N/A",
+    "Energy": 2,
+    "Tension": 2,
+    "Control": 5,
+    "Need": [
+      "structure",
+      "precision",
+      "calm"
+    ]
+  },
+  {
+    "Name": "Elderflower Liqueur",
+    "Category": "Modifier",
+    "Description": "Floral sweetness; makes drinks immediately approachable and aromatic.",
+    "Recipe": "N/A",
+    "Energy": 2,
+    "Tension": 2,
+    "Control": 4,
+    "Need": [
+      "softness",
+      "romance",
+      "ease"
+    ]
+  },
+  {
+    "Name": "Fernet",
+    "Category": "Modifier",
+    "Description": "Intense bitter-mint profile; polarizing, high-impact accent or rinse.",
+    "Recipe": "N/A",
+    "Energy": 2,
+    "Tension": 5,
+    "Control": 2,
+    "Need": [
+      "shock",
+      "defiance",
+      "wake-up"
+    ]
+  },
+  {
+    "Name": "Fino Sherry",
+    "Category": "Modifier",
+    "Description": "Very dry sherry; saline, bready, sharpens finish and adds savory elegance.",
+    "Recipe": "N/A",
+    "Energy": 2,
+    "Tension": 4,
+    "Control": 4,
+    "Need": [
+      "clarity",
+      "sophistication",
+      "restraint"
+    ]
+  },
+  {
+    "Name": "Gentian Bitter (Suze-style)",
+    "Category": "Modifier",
+    "Description": "Bright, rooty bitterness; lifts aromatics without heavy sweetness.",
+    "Recipe": "N/A",
+    "Energy": 2,
+    "Tension": 5,
+    "Control": 3,
+    "Need": [
+      "focus",
+      "edge",
+      "clarity"
+    ]
+  },
+  {
+    "Name": "Grenadine (Pomegranate Syrup)",
+    "Category": "Modifier",
+    "Description": "Fruity-tart sweetness; adds color and nostalgic profile (best when real).",
+    "Recipe": "N/A",
+    "Energy": 2,
+    "Tension": 3,
+    "Control": 3,
+    "Need": [
+      "nostalgia",
+      "playfulness",
+      "brightness"
+    ]
+  },
+  {
+    "Name": "Honey Syrup",
+    "Category": "Modifier",
+    "Description": "Floral sweetness; adds warmth and gentle complexity.",
+    "Recipe": "N/A",
+    "Energy": 1,
+    "Tension": 2,
+    "Control": 4,
+    "Need": [
+      "warmth",
+      "soothing",
+      "care"
+    ]
+  },
+  {
+    "Name": "Maraschino Liqueur",
+    "Category": "Modifier",
+    "Description": "Cherry-pit almondy sweetness; small dose adds lift and perfume.",
+    "Recipe": "N/A",
+    "Energy": 2,
+    "Tension": 4,
+    "Control": 3,
+    "Need": [
+      "mystique",
+      "complexity",
+      "spark"
+    ]
+  },
+  {
+    "Name": "Orange Bitters",
+    "Category": "Modifier",
+    "Description": "Citrus bitters; brightens martinis/old-fashioneds without adding sugar.",
+    "Recipe": "N/A",
+    "Energy": 2,
+    "Tension": 3,
+    "Control": 5,
+    "Need": [
+      "clarity",
+      "precision",
+      "lift"
+    ]
+  },
+  {
+    "Name": "Peychaud's Bitters",
+    "Category": "Modifier",
+    "Description": "Anise-cherry bitters; adds perfumed sweetness illusion and color.",
+    "Recipe": "N/A",
+    "Energy": 2,
+    "Tension": 3,
+    "Control": 4,
+    "Need": [
+      "style",
+      "nostalgia",
+      "spark"
+    ]
+  },
+  {
+    "Name": "Rich Syrup (2:1)",
+    "Category": "Modifier",
+    "Description": "Denser sweetness; adds body and smoother mouthfeel.",
+    "Recipe": "N/A",
+    "Energy": 1,
+    "Tension": 1,
+    "Control": 5,
+    "Need": [
+      "comfort",
+      "softness",
+      "stability"
+    ]
+  },
+  {
+    "Name": "Simple Syrup (1:1)",
+    "Category": "Modifier",
+    "Description": "Baseline sweetener; raises drinkability and reduces perceived acidity.",
+    "Recipe": "N/A",
+    "Energy": 1,
+    "Tension": 1,
+    "Control": 5,
+    "Need": [
+      "ease",
+      "comfort",
+      "balance"
+    ]
+  },
+  {
+    "Name": "Sweet Vermouth",
+    "Category": "Modifier",
+    "Description": "Fortified wine; sweet-herbal depth, rounds edges (Negroni/Manhattan core).",
+    "Recipe": "N/A",
+    "Energy": 2,
+    "Tension": 3,
+    "Control": 4,
+    "Need": [
+      "warmth",
+      "roundness",
+      "depth"
+    ]
+  },
+  {
+    "Name": "Triple Sec",
+    "Category": "Modifier",
+    "Description": "Orange liqueur providing sweetness and citrus lift",
+    "Recipe": "N/A",
+    "Energy": 3,
+    "Tension": 3,
+    "Control": 3,
+    "Need": [
+      "brightness",
+      "accessibility",
+      "sociability"
+    ]
+  },
+  {
+    "Name": "Triple Sec (Orange Liqueur)",
+    "Category": "Modifier",
+    "Description": "Orange sweetness + citrus oil; classic sweetener/bridge in sours.",
+    "Recipe": "N/A",
+    "Energy": 3,
+    "Tension": 3,
+    "Control": 3,
+    "Need": [
+      "brightness",
+      "accessibility",
+      "sociability"
+    ]
+  },
+  {
+    "Name": "Grapefruit Juice",
+    "Category": "Fruit / Juice",
+    "Description": "Bitter-citrus acidity; adds grown-up brightness and dry finish.",
+    "Recipe": "N/A",
+    "Energy": 4,
+    "Tension": 4,
+    "Control": 3,
+    "Need": [
+      "edge",
+      "refresh",
+      "maturity"
+    ]
+  },
+  {
+    "Name": "Lemon Juice",
+    "Category": "Fruit / Juice",
+    "Description": "Clean acidity; slightly softer than lime, very versatile.",
+    "Recipe": "N/A",
+    "Energy": 4,
+    "Tension": 3,
+    "Control": 4,
+    "Need": [
+      "clean finish",
+      "balance",
+      "lightness"
+    ]
+  },
+  {
+    "Name": "Lime Juice",
+    "Category": "Fruit / Juice",
+    "Description": "High-acid; sharp, bright, drives classic sour structures.",
+    "Recipe": "N/A",
+    "Energy": 5,
+    "Tension": 4,
+    "Control": 3,
+    "Need": [
+      "refresh",
+      "wakefulness",
+      "clarity"
+    ]
+  },
+  {
+    "Name": "Orange",
+    "Category": "Fruit",
+    "Description": "Sweet citrus providing aroma and roundness",
+    "Recipe": "N/A",
+    "Energy": 3,
+    "Tension": 2,
+    "Control": 4,
+    "Need": [
+      "warmth",
+      "approachability",
+      "comfort"
+    ]
+  },
+  {
+    "Name": "Orange Juice",
+    "Category": "Fruit / Juice",
+    "Description": "Sweet citrus body; adds softness, can dilute tension if overused.",
+    "Recipe": "N/A",
+    "Energy": 3,
+    "Tension": 2,
+    "Control": 3,
+    "Need": [
+      "comfort",
+      "approachability",
+      "ease"
+    ]
+  },
+  {
+    "Name": "Pineapple",
+    "Category": "Fruit",
+    "Description": "Tropical fruit with sweetness and mild acidity",
+    "Recipe": "N/A",
+    "Energy": 4,
+    "Tension": 3,
+    "Control": 2,
+    "Need": [
+      "playfulness",
+      "escape",
+      "pleasure"
+    ]
+  },
+  {
+    "Name": "Pineapple Juice",
+    "Category": "Fruit / Juice",
+    "Description": "Tropical sweetness + aroma; creates instant vacation vibe.",
+    "Recipe": "N/A",
+    "Energy": 4,
+    "Tension": 3,
+    "Control": 2,
+    "Need": [
+      "playfulness",
+      "escape",
+      "pleasure"
+    ]
+  },
+  {
+    "Name": "Basil",
+    "Category": "Spice / Botanical",
+    "Description": "Green, sweet-savory herb; modern freshness with subtle spice.",
+    "Recipe": "N/A",
+    "Energy": 3,
+    "Tension": 4,
+    "Control": 3,
+    "Need": [
+      "novelty",
+      "freshness",
+      "focus"
+    ]
+  },
+  {
+    "Name": "Cinnamon",
+    "Category": "Spice / Botanical",
+    "Description": "Warm baking spice; reinforces comfort and dessert associations.",
+    "Recipe": "N/A",
+    "Energy": 2,
+    "Tension": 3,
+    "Control": 4,
+    "Need": [
+      "comfort",
+      "warmth",
+      "indulgence"
+    ]
+  },
+  {
+    "Name": "Ginger",
+    "Category": "Spice / Botanical",
+    "Description": "Spicy heat + aroma; creates immediate energy and tension.",
+    "Recipe": "N/A",
+    "Energy": 5,
+    "Tension": 5,
+    "Control": 2,
+    "Need": [
+      "kick",
+      "excitement",
+      "wake-up"
+    ]
+  },
+  {
+    "Name": "Mint",
+    "Category": "Spice / Botanical",
+    "Description": "Cooling aromatic herb; boosts perceived freshness and lift.",
+    "Recipe": "N/A",
+    "Energy": 4,
+    "Tension": 3,
+    "Control": 3,
+    "Need": [
+      "refresh",
+      "lightness",
+      "wakefulness"
+    ]
+  },
+  {
+    "Name": "Rosemary",
+    "Category": "Spice / Botanical",
+    "Description": "Piney, resinous herb; adds serious aromatic structure.",
+    "Recipe": "N/A",
+    "Energy": 2,
+    "Tension": 4,
+    "Control": 4,
+    "Need": [
+      "grounding",
+      "clarity",
+      "authority"
+    ]
+  },
+  {
+    "Name": "Black Tea",
+    "Category": "Tea / Coffee",
+    "Description": "Firm tannins; adds dryness and structure like a non-alcoholic backbone.",
+    "Recipe": "N/A",
+    "Energy": 2,
+    "Tension": 4,
+    "Control": 4,
+    "Need": [
+      "structure",
+      "discipline",
+      "clarity"
+    ]
+  },
+  {
+    "Name": "Cold Brew Coffee",
+    "Category": "Tea / Coffee",
+    "Description": "Low-acid coffee depth; adds roast bitterness and adult sweetness illusion.",
+    "Recipe": "N/A",
+    "Energy": 3,
+    "Tension": 4,
+    "Control": 3,
+    "Need": [
+      "drive",
+      "depth",
+      "late-night"
+    ]
+  },
+  {
+    "Name": "Green Tea",
+    "Category": "Tea / Coffee",
+    "Description": "Fresh, grassy tannins; adds restrained bitterness and clarity.",
+    "Recipe": "N/A",
+    "Energy": 2,
+    "Tension": 3,
+    "Control": 4,
+    "Need": [
+      "clarity",
+      "restraint",
+      "focus"
+    ]
+  },
+  {
+    "Name": "Matcha",
+    "Category": "Tea / Coffee",
+    "Description": "Umami-green intensity; striking color and polarizing bitterness.",
+    "Recipe": "N/A",
+    "Energy": 3,
+    "Tension": 5,
+    "Control": 2,
+    "Need": [
+      "focus",
+      "novelty",
+      "intensity"
+    ]
+  },
+  {
+    "Name": "Oolong Tea",
+    "Category": "Tea / Coffee",
+    "Description": "Floral-roasty complexity; bridges light and dark profiles.",
+    "Recipe": "N/A",
+    "Energy": 2,
+    "Tension": 3,
+    "Control": 4,
+    "Need": [
+      "balance",
+      "depth",
+      "calm focus"
+    ]
+  },
+  {
+    "Name": "Ginger Beer (Fermented-style)",
+    "Category": "Fermentation",
+    "Description": "Spicy carbonation; high energy, strong presence in highballs.",
+    "Recipe": "N/A",
+    "Energy": 5,
+    "Tension": 4,
+    "Control": 2,
+    "Need": [
+      "kick",
+      "party",
+      "wake-up"
+    ]
+  },
+  {
+    "Name": "Kombucha",
+    "Category": "Fermentation",
+    "Description": "Fermented tea; tangy, lightly fizzy, adds living acidity.",
+    "Recipe": "N/A",
+    "Energy": 4,
+    "Tension": 4,
+    "Control": 2,
+    "Need": [
+      "refresh",
+      "curiosity",
+      "lightness"
+    ]
+  },
+  {
+    "Name": "Shrub (Vinegar Syrup)",
+    "Category": "Fermentation",
+    "Description": "Sweet-acid vinegar syrup; complex acidity beyond citrus.",
+    "Recipe": "N/A",
+    "Energy": 4,
+    "Tension": 5,
+    "Control": 3,
+    "Need": [
+      "spark",
+      "novelty",
+      "wakefulness"
+    ]
+  },
+  {
+    "Name": "Tepache (Pineapple Ferment)",
+    "Category": "Fermentation",
+    "Description": "Fermented pineapple; funky tropical acidity and aroma.",
+    "Recipe": "N/A",
+    "Energy": 4,
+    "Tension": 4,
+    "Control": 2,
+    "Need": [
+      "escape",
+      "playfulness",
+      "novelty"
+    ]
+  },
+  {
+    "Name": "Verjus",
+    "Category": "Fermentation",
+    "Description": "Unripe grape juice; softer, wine-like acidity for elegant sours.",
+    "Recipe": "N/A",
+    "Energy": 3,
+    "Tension": 3,
+    "Control": 4,
+    "Need": [
+      "elegance",
+      "balance",
+      "restraint"
+    ]
+  },
+  {
+    "Name": "Butter Fat-Wash",
+    "Category": "Fat / Texture",
+    "Description": "Creamy richness; boosts dessert association and warmth.",
+    "Recipe": "N/A",
+    "Energy": 1,
+    "Tension": 3,
+    "Control": 3,
+    "Need": [
+      "indulgence",
+      "comfort",
+      "warmth"
+    ]
+  },
+  {
+    "Name": "Coconut Oil Fat-Wash",
+    "Category": "Fat / Texture",
+    "Description": "Adds silky mouthfeel and coconut aroma; rounds harsh alcohol edges.",
+    "Recipe": "N/A",
+    "Energy": 2,
+    "Tension": 2,
+    "Control": 4,
+    "Need": [
+      "comfort",
+      "softness",
+      "escape"
+    ]
+  },
+  {
+    "Name": "Egg White",
+    "Category": "Fat / Texture",
+    "Description": "Foam and texture; increases perceived luxury and softens sharpness.",
+    "Recipe": "N/A",
+    "Energy": 2,
+    "Tension": 2,
+    "Control": 4,
+    "Need": [
+      "comfort",
+      "softness",
+      "assurance"
+    ]
+  },
+  {
+    "Name": "Milk Clarification (Milk Punch)",
+    "Category": "Fat / Texture",
+    "Description": "Protein clarification; smooth, clear texture with softened acidity.",
+    "Recipe": "N/A",
+    "Energy": 1,
+    "Tension": 2,
+    "Control": 5,
+    "Need": [
+      "calm",
+      "polish",
+      "stability"
+    ]
+  },
+  {
+    "Name": "Sesame Oil Rinse",
+    "Category": "Fat / Texture",
+    "Description": "Nutty aroma; tiny dose creates strong umami impression.",
+    "Recipe": "N/A",
+    "Energy": 1,
+    "Tension": 5,
+    "Control": 2,
+    "Need": [
+      "novelty",
+      "depth",
+      "identity"
+    ]
+  },
+  {
+    "Name": "Miso (Light)",
+    "Category": "Umami / Saline",
+    "Description": "Fermented umami; used in tiny amounts for savory complexity.",
+    "Recipe": "N/A",
+    "Energy": 1,
+    "Tension": 5,
+    "Control": 2,
+    "Need": [
+      "depth",
+      "identity",
+      "novelty"
+    ]
+  },
+  {
+    "Name": "Olive Brine",
+    "Category": "Umami / Saline",
+    "Description": "Salty brine for dirty martinis; immediate savory identity.",
+    "Recipe": "N/A",
+    "Energy": 2,
+    "Tension": 5,
+    "Control": 3,
+    "Need": [
+      "confidence",
+      "edge",
+      "identity"
+    ]
+  },
+  {
+    "Name": "Saline Solution (10%)",
+    "Category": "Umami / Saline",
+    "Description": "Tiny salt addition; amplifies aroma and reduces bitterness/flatness.",
+    "Recipe": "N/A",
+    "Energy": 1,
+    "Tension": 3,
+    "Control": 5,
+    "Need": [
+      "precision",
+      "balance",
+      "finish"
+    ]
+  },
+  {
+    "Name": "Soy Sauce (Micro-dose)",
+    "Category": "Umami / Saline",
+    "Description": "Salt + umami; micro-dose can deepen brown spirits and reduce sweetness.",
+    "Recipe": "N/A",
+    "Energy": 1,
+    "Tension": 5,
+    "Control": 2,
+    "Need": [
+      "edge",
+      "depth",
+      "savory focus"
+    ]
+  },
+  {
+    "Name": "Tomato Water",
+    "Category": "Umami / Saline",
+    "Description": "Clear savory base; adds umami depth without heaviness.",
+    "Recipe": "N/A",
+    "Energy": 2,
+    "Tension": 5,
+    "Control": 3,
+    "Need": [
+      "depth",
+      "novelty",
+      "savory focus"
+    ]
+  },
+  {
+    "Name": "Americano",
+    "Category": "Cocktail",
+    "Description": "Pre-Negroni classic; bitter-sweet and low-proof with carbonation.",
+    "Recipe": "Campari 30ml + Sweet Vermouth 30ml + Soda",
+    "Energy": 3,
+    "Tension": 4,
+    "Control": 5,
+    "Need": [
+      "restraint",
+      "balance",
+      "daytime composure"
+    ]
+  },
+  {
+    "Name": "Aperol Spritz",
+    "Category": "Cocktail",
+    "Description": "Low-ABV aperitivo highball with gentle bitterness and bubbles.",
+    "Recipe": "Aperol 60ml + Prosecco 90ml + Soda 30ml",
+    "Energy": 4,
+    "Tension": 3,
+    "Control": 4,
+    "Need": [
+      "social ease",
+      "refresh",
+      "casual pleasure"
+    ]
+  },
+  {
+    "Name": "Bellini",
+    "Category": "Cocktail",
+    "Description": "Fruit-forward sparkling cocktail with soft sweetness.",
+    "Recipe": "Peach Puree + Prosecco",
+    "Energy": 3,
+    "Tension": 2,
+    "Control": 4,
+    "Need": [
+      "romance",
+      "ease",
+      "celebration"
+    ]
+  },
+  {
+    "Name": "Bijou",
+    "Category": "Cocktail",
+    "Description": "Herbal, jewel-toned classic balancing gin, vermouth, and Chartreuse.",
+    "Recipe": "Gin 30ml + Sweet Vermouth 30ml + Green Chartreuse 30ml",
+    "Energy": 3,
+    "Tension": 5,
+    "Control": 4,
+    "Need": [
+      "intensity",
+      "identity",
+      "depth"
+    ]
+  },
+  {
+    "Name": "Black Manhattan",
+    "Category": "Cocktail",
+    "Description": "Modern spirit-forward classic replacing vermouth with amaro.",
+    "Recipe": "Rye Whiskey 60ml + Amaro 30ml + Bitters",
+    "Energy": 2,
+    "Tension": 5,
+    "Control": 4,
+    "Need": [
+      "darkness",
+      "depth",
+      "late-night"
+    ]
+  },
+  {
+    "Name": "Bloody Mary",
+    "Category": "Cocktail",
+    "Description": "Umami-forward brunch classic built on tomato, spice, and acidity.",
+    "Recipe": "Vodka 50ml + Tomato Juice + Lemon + Worcestershire + Hot Sauce",
+    "Energy": 3,
+    "Tension": 5,
+    "Control": 3,
+    "Need": [
+      "recovery",
+      "wake-up",
+      "savory focus"
+    ]
+  },
+  {
+    "Name": "Boulevardier",
+    "Category": "Cocktail",
+    "Description": "Whiskey-based Negroni variant with warmer, heavier body.",
+    "Recipe": "Bourbon 30ml + Campari 30ml + Sweet Vermouth 30ml",
+    "Energy": 2,
+    "Tension": 4,
+    "Control": 4,
+    "Need": [
+      "warmth",
+      "depth",
+      "evening calm"
+    ]
+  },
+  {
+    "Name": "Bramble",
+    "Category": "Cocktail",
+    "Description": "Gin sour with berry sweetness and dry finish.",
+    "Recipe": "Gin 50ml + Lemon Juice 25ml + Simple Syrup + Crème de Mûre Float",
+    "Energy": 4,
+    "Tension": 3,
+    "Control": 4,
+    "Need": [
+      "nostalgia",
+      "playfulness",
+      "ease"
+    ]
+  },
+  {
+    "Name": "Caipirinha",
+    "Category": "Cocktail",
+    "Description": "Rustic lime-and-sugar build emphasizing freshness and rawness.",
+    "Recipe": "Cachaça 60ml + Lime Wedges + Sugar",
+    "Energy": 5,
+    "Tension": 4,
+    "Control": 2,
+    "Need": [
+      "freedom",
+      "heat",
+      "spontaneity"
+    ]
+  },
+  {
+    "Name": "Campari Spritz",
+    "Category": "Cocktail",
+    "Description": "Bitter-forward spritz with higher adult tension.",
+    "Recipe": "Campari 60ml + Prosecco 90ml + Soda 30ml",
+    "Energy": 4,
+    "Tension": 4,
+    "Control": 4,
+    "Need": [
+      "maturity",
+      "edge",
+      "aperitivo focus"
+    ]
+  },
+  {
+    "Name": "Celery Gimlet",
+    "Category": "Cocktail",
+    "Description": "Green, savory gimlet with vegetal sharpness.",
+    "Recipe": "Gin 60ml + Lime Juice 22ml + Celery Syrup",
+    "Energy": 4,
+    "Tension": 5,
+    "Control": 3,
+    "Need": [
+      "focus",
+      "edge",
+      "clarity"
+    ]
+  },
+  {
+    "Name": "Champagne Cocktail",
+    "Category": "Cocktail",
+    "Description": "Old-school sparkling serve with sugar and bitters.",
+    "Recipe": "Sugar Cube + Angostura Bitters + Champagne",
+    "Energy": 3,
+    "Tension": 2,
+    "Control": 5,
+    "Need": [
+      "ritual",
+      "tradition",
+      "composure"
+    ]
+  },
+  {
+    "Name": "Clover Club",
+    "Category": "Cocktail",
+    "Description": "Pre-Prohibition gin sour with raspberry and egg white texture.",
+    "Recipe": "Gin 50ml + Lemon Juice 20ml + Raspberry Syrup + Egg White",
+    "Energy": 3,
+    "Tension": 3,
+    "Control": 4,
+    "Need": [
+      "softness",
+      "elegance",
+      "assurance"
+    ]
+  },
+  {
+    "Name": "Corpse Reviver No. 2",
+    "Category": "Cocktail",
+    "Description": "Bright, aromatic revival cocktail with absinthe lift.",
+    "Recipe": "Gin 22.5ml + Cointreau 22.5ml + Lillet Blanc 22.5ml + Lemon Juice 22.5ml + Absinthe Rinse",
+    "Energy": 5,
+    "Tension": 4,
+    "Control": 4,
+    "Need": [
+      "wake-up",
+      "clarity",
+      "optimism"
+    ]
+  },
+  {
+    "Name": "Cuba Libre",
+    "Category": "Cocktail",
+    "Description": "Rum and cola with lime acidity; accessible and nostalgic.",
+    "Recipe": "White or Dark Rum 50ml + Cola + Lime",
+    "Energy": 4,
+    "Tension": 2,
+    "Control": 3,
+    "Need": [
+      "nostalgia",
+      "comfort",
+      "casual fun"
+    ]
+  },
+  {
+    "Name": "Daiquiri",
+    "Category": "Cocktail",
+    "Description": "Pure sour structure; benchmark cocktail for balance and freshness.",
+    "Recipe": "White Rum 60ml + Lime Juice 25ml + Simple Syrup 15ml",
+    "Energy": 5,
+    "Tension": 4,
+    "Control": 4,
+    "Need": [
+      "refresh",
+      "clarity",
+      "wakefulness"
+    ]
+  },
+  {
+    "Name": "Dark 'n' Stormy",
+    "Category": "Cocktail",
+    "Description": "Spicy-sweet highball with dramatic contrast.",
+    "Recipe": "Dark Rum 60ml + Ginger Beer + Lime",
+    "Energy": 5,
+    "Tension": 4,
+    "Control": 3,
+    "Need": [
+      "kick",
+      "playfulness",
+      "evening energy"
+    ]
+  },
+  {
+    "Name": "Death in the Afternoon",
+    "Category": "Cocktail",
+    "Description": "Absinthe-laced champagne cocktail; aromatic and provocative.",
+    "Recipe": "Absinthe 20ml + Champagne",
+    "Energy": 4,
+    "Tension": 5,
+    "Control": 3,
+    "Need": [
+      "provocation",
+      "intensity",
+      "avant-garde"
+    ]
+  },
+  {
+    "Name": "Dirty Martini",
+    "Category": "Cocktail",
+    "Description": "Savory martini with olive brine adding salinity and umami tension.",
+    "Recipe": "Gin or Vodka 60ml + Dry Vermouth 10ml + Olive Brine 10ml",
+    "Energy": 3,
+    "Tension": 5,
+    "Control": 5,
+    "Need": [
+      "confidence",
+      "edge",
+      "decisiveness"
+    ]
+  },
+  {
+    "Name": "Dry Martini",
+    "Category": "Cocktail",
+    "Description": "Ultra-dry martini style with extreme focus on gin and dilution control.",
+    "Recipe": "Gin 65ml + Dry Vermouth 5ml",
+    "Energy": 3,
+    "Tension": 2,
+    "Control": 5,
+    "Need": [
+      "discipline",
+      "precision",
+      "restraint"
+    ]
+  },
+  {
+    "Name": "Espresso Martini",
+    "Category": "Cocktail",
+    "Description": "Coffee-driven modern classic combining bitterness and sweetness.",
+    "Recipe": "Vodka 40ml + Coffee Liqueur 20ml + Espresso 30ml",
+    "Energy": 5,
+    "Tension": 4,
+    "Control": 3,
+    "Need": [
+      "drive",
+      "alertness",
+      "late-night"
+    ]
+  },
+  {
+    "Name": "French 75",
+    "Category": "Cocktail",
+    "Description": "Sparkling gin sour; celebratory, bright, and precise.",
+    "Recipe": "Gin 30ml + Lemon Juice 15ml + Sugar + Champagne",
+    "Energy": 5,
+    "Tension": 3,
+    "Control": 4,
+    "Need": [
+      "celebration",
+      "optimism",
+      "lightness"
+    ]
+  },
+  {
+    "Name": "Gibson",
+    "Category": "Cocktail",
+    "Description": "Savory martini variant defined by pickled onion brine aroma.",
+    "Recipe": "Gin 60ml + Dry Vermouth 10ml + Pickled Onion",
+    "Energy": 3,
+    "Tension": 4,
+    "Control": 5,
+    "Need": [
+      "edge",
+      "identity",
+      "decisiveness"
+    ]
+  },
+  {
+    "Name": "Gibson (Savory Focus)",
+    "Category": "Cocktail",
+    "Description": "Martini variant emphasizing pickled onion aroma and savory sharpness.",
+    "Recipe": "Gin 60ml + Dry Vermouth 10ml + Pickled Onion",
+    "Energy": 3,
+    "Tension": 4,
+    "Control": 5,
+    "Need": [
+      "identity",
+      "precision",
+      "authority"
+    ]
+  },
+  {
+    "Name": "Gimlet",
+    "Category": "Cocktail",
+    "Description": "Sharp, minimal gin sour highlighting citrus clarity.",
+    "Recipe": "Gin 60ml + Lime Juice 22ml + Simple Syrup 15ml",
+    "Energy": 4,
+    "Tension": 3,
+    "Control": 4,
+    "Need": [
+      "clarity",
+      "focus",
+      "refresh"
+    ]
+  },
+  {
+    "Name": "Gin & Tonic",
+    "Category": "Cocktail",
+    "Description": "Botanical highball emphasizing bitterness and carbonation.",
+    "Recipe": "Gin 50ml + Tonic Water",
+    "Energy": 4,
+    "Tension": 3,
+    "Control": 4,
+    "Need": [
+      "refresh",
+      "clarity",
+      "casual ease"
+    ]
+  },
+  {
+    "Name": "Gold Rush",
+    "Category": "Cocktail",
+    "Description": "Simplified whiskey sour emphasizing honey sweetness.",
+    "Recipe": "Bourbon 60ml + Lemon Juice 25ml + Honey Syrup",
+    "Energy": 4,
+    "Tension": 3,
+    "Control": 4,
+    "Need": [
+      "comfort",
+      "approachability",
+      "warmth"
+    ]
+  },
+  {
+    "Name": "Hanky Panky",
+    "Category": "Cocktail",
+    "Description": "Gin martini with a bitter Fernet accent for adult complexity.",
+    "Recipe": "Gin 45ml + Sweet Vermouth 45ml + Fernet (barspoon)",
+    "Energy": 2,
+    "Tension": 5,
+    "Control": 4,
+    "Need": [
+      "maturity",
+      "complexity",
+      "confidence"
+    ]
+  },
+  {
+    "Name": "Hemingway Daiquiri",
+    "Category": "Cocktail",
+    "Description": "Dry, tart daiquiri variant with grapefruit bitterness.",
+    "Recipe": "White Rum 60ml + Lime Juice 20ml + Grapefruit Juice 15ml + Maraschino Liqueur",
+    "Energy": 5,
+    "Tension": 4,
+    "Control": 4,
+    "Need": [
+      "clarity",
+      "edge",
+      "refresh"
+    ]
+  },
+  {
+    "Name": "Highball",
+    "Category": "Cocktail",
+    "Description": "Whisky and soda; maximal restraint and drinkability.",
+    "Recipe": "Japanese Whisky 45ml + Soda Water",
+    "Energy": 3,
+    "Tension": 2,
+    "Control": 5,
+    "Need": [
+      "restraint",
+      "balance",
+      "long conversation"
+    ]
+  },
+  {
+    "Name": "Jungle Bird",
+    "Category": "Cocktail",
+    "Description": "Tiki with bitter edge; Campari introduces adult tension.",
+    "Recipe": "Dark Rum 45ml + Campari 15ml + Pineapple Juice + Lime",
+    "Energy": 4,
+    "Tension": 5,
+    "Control": 3,
+    "Need": [
+      "complexity",
+      "escape",
+      "maturity"
+    ]
+  },
+  {
+    "Name": "Kir Royale",
+    "Category": "Cocktail",
+    "Description": "Elegant sparkling wine cocktail with berry sweetness.",
+    "Recipe": "Crème de Cassis + Champagne",
+    "Energy": 3,
+    "Tension": 3,
+    "Control": 5,
+    "Need": [
+      "elegance",
+      "soft celebration",
+      "assurance"
+    ]
+  },
+  {
+    "Name": "Last Word",
+    "Category": "Cocktail",
+    "Description": "Equal-parts modern classic balancing herbal intensity and citrus.",
+    "Recipe": "Gin 22.5ml + Green Chartreuse 22.5ml + Maraschino Liqueur 22.5ml + Lime Juice 22.5ml",
+    "Energy": 4,
+    "Tension": 5,
+    "Control": 4,
+    "Need": [
+      "intensity",
+      "balance",
+      "identity"
+    ]
+  },
+  {
+    "Name": "Mai Tai",
+    "Category": "Cocktail",
+    "Description": "Layered rum cocktail balancing nutty sweetness and citrus.",
+    "Recipe": "Aged Rum 60ml + Lime Juice 25ml + Orgeat + Orange Liqueur",
+    "Energy": 4,
+    "Tension": 4,
+    "Control": 3,
+    "Need": [
+      "escape",
+      "pleasure",
+      "playfulness"
+    ]
+  },
+  {
+    "Name": "Manhattan",
+    "Category": "Cocktail",
+    "Description": "Whiskey-vermouth structure with bitters; formal and composed.",
+    "Recipe": "Rye Whiskey 60ml + Sweet Vermouth 30ml + Angostura Bitters",
+    "Energy": 2,
+    "Tension": 3,
+    "Control": 5,
+    "Need": [
+      "authority",
+      "order",
+      "confidence"
+    ]
+  },
+  {
+    "Name": "Margarita",
+    "Category": "Cocktail",
+    "Description": "Agave-forward sour with salt tension and citrus lift.",
+    "Recipe": "Tequila Blanco 50ml + Lime Juice 25ml + Triple Sec 20ml",
+    "Energy": 5,
+    "Tension": 4,
+    "Control": 3,
+    "Need": [
+      "excitement",
+      "social energy",
+      "release"
+    ]
+  },
+  {
+    "Name": "Martini",
+    "Category": "Cocktail",
+    "Description": "Minimalist, spirit-forward cocktail emphasizing precision, restraint, and clarity.",
+    "Recipe": "Gin 60ml + Dry Vermouth 10ml + Orange Bitters (optional)",
+    "Energy": 3,
+    "Tension": 2,
+    "Control": 5,
+    "Need": [
+      "clarity",
+      "authority",
+      "self-control"
+    ]
+  },
+  {
+    "Name": "Michelada",
+    "Category": "Cocktail",
+    "Description": "Beer-based savory refresher with lime, salt, and spice.",
+    "Recipe": "Lager Beer + Lime Juice + Salt + Hot Sauce",
+    "Energy": 4,
+    "Tension": 4,
+    "Control": 3,
+    "Need": [
+      "refresh",
+      "casual recovery",
+      "heat"
+    ]
+  },
+  {
+    "Name": "Mimosa",
+    "Category": "Cocktail",
+    "Description": "Breakfast classic; citrus brightness with gentle fizz.",
+    "Recipe": "Orange Juice + Champagne",
+    "Energy": 3,
+    "Tension": 2,
+    "Control": 4,
+    "Need": [
+      "lightness",
+      "morning lift",
+      "social comfort"
+    ]
+  },
+  {
+    "Name": "Mint Julep",
+    "Category": "Cocktail",
+    "Description": "Chilled bourbon showcase with mint aromatics and dilution control.",
+    "Recipe": "Bourbon 60ml + Sugar + Mint",
+    "Energy": 3,
+    "Tension": 2,
+    "Control": 5,
+    "Need": [
+      "calm",
+      "tradition",
+      "refresh"
+    ]
+  },
+  {
+    "Name": "Miso Sour",
+    "Category": "Cocktail",
+    "Description": "Modern savory sour balancing sweetness, acidity, and fermented umami.",
+    "Recipe": "Whiskey or Rum 50ml + Lemon Juice 25ml + Miso Syrup",
+    "Energy": 4,
+    "Tension": 5,
+    "Control": 3,
+    "Need": [
+      "novelty",
+      "complexity",
+      "curiosity"
+    ]
+  },
+  {
+    "Name": "Mojito",
+    "Category": "Cocktail",
+    "Description": "Mint-lime highball; clean refreshment with gentle sweetness.",
+    "Recipe": "White Rum 50ml + Lime + Sugar + Mint + Soda",
+    "Energy": 5,
+    "Tension": 3,
+    "Control": 3,
+    "Need": [
+      "refresh",
+      "lightness",
+      "social ease"
+    ]
+  },
+  {
+    "Name": "Moscow Mule",
+    "Category": "Cocktail",
+    "Description": "Highball with ginger spice and carbonation.",
+    "Recipe": "Vodka 50ml + Lime Juice 15ml + Ginger Beer",
+    "Energy": 5,
+    "Tension": 3,
+    "Control": 3,
+    "Need": [
+      "refresh",
+      "party",
+      "casual energy"
+    ]
+  },
+  {
+    "Name": "Naked & Famous",
+    "Category": "Cocktail",
+    "Description": "Smoky modern sour with equal-parts precision.",
+    "Recipe": "Mezcal 22.5ml + Aperol 22.5ml + Yellow Chartreuse 22.5ml + Lime Juice 22.5ml",
+    "Energy": 4,
+    "Tension": 5,
+    "Control": 3,
+    "Need": [
+      "edge",
+      "identity",
+      "modern confidence"
+    ]
+  },
+  {
+    "Name": "Negroni",
+    "Category": "Cocktail",
+    "Description": "Equal-parts bitter-sweet balance; iconic tension between bitterness and sweetness.",
+    "Recipe": "Gin 30ml + Campari 30ml + Sweet Vermouth 30ml",
+    "Energy": 3,
+    "Tension": 5,
+    "Control": 4,
+    "Need": [
+      "maturity",
+      "character",
+      "social confidence"
+    ]
+  },
+  {
+    "Name": "Old Fashioned",
+    "Category": "Cocktail",
+    "Description": "Spirit-first cocktail emphasizing sugar, bitters, and dilution control.",
+    "Recipe": "Bourbon 60ml + Sugar + Angostura Bitters",
+    "Energy": 2,
+    "Tension": 3,
+    "Control": 5,
+    "Need": [
+      "grounding",
+      "stability",
+      "tradition"
+    ]
+  },
+  {
+    "Name": "Oyster Martini",
+    "Category": "Cocktail",
+    "Description": "Coastal savory martini highlighting brine and mineral notes.",
+    "Recipe": "Gin or Vodka 60ml + Dry Vermouth + Oyster Brine",
+    "Energy": 2,
+    "Tension": 5,
+    "Control": 4,
+    "Need": [
+      "novelty",
+      "brine",
+      "luxury edge"
+    ]
+  },
+  {
+    "Name": "Painkiller",
+    "Category": "Cocktail",
+    "Description": "Creamy tropical tiki drink emphasizing comfort and sweetness.",
+    "Recipe": "Dark Rum + Pineapple Juice + Orange Juice + Coconut Cream",
+    "Energy": 4,
+    "Tension": 2,
+    "Control": 3,
+    "Need": [
+      "comfort",
+      "vacation",
+      "indulgence"
+    ]
+  },
+  {
+    "Name": "Paloma",
+    "Category": "Cocktail",
+    "Description": "Grapefruit-forward tequila highball; bitter-refreshing profile.",
+    "Recipe": "Tequila Blanco 50ml + Grapefruit Soda + Lime",
+    "Energy": 5,
+    "Tension": 4,
+    "Control": 3,
+    "Need": [
+      "refresh",
+      "lightness",
+      "social ease"
+    ]
+  },
+  {
+    "Name": "Paper Plane",
+    "Category": "Cocktail",
+    "Description": "Modern equal-parts sour; light, bitter-sweet harmony.",
+    "Recipe": "Bourbon 22.5ml + Aperol 22.5ml + Amaro 22.5ml + Lemon Juice 22.5ml",
+    "Energy": 4,
+    "Tension": 4,
+    "Control": 4,
+    "Need": [
+      "balance",
+      "optimism",
+      "approachability"
+    ]
+  },
+  {
+    "Name": "Penicillin",
+    "Category": "Cocktail",
+    "Description": "Modern whiskey sour with honey-ginger warmth and smoky accent.",
+    "Recipe": "Blended Scotch 60ml + Lemon Juice 22ml + Honey-Ginger Syrup + Islay Scotch Float",
+    "Energy": 4,
+    "Tension": 4,
+    "Control": 4,
+    "Need": [
+      "comfort",
+      "recovery",
+      "warmth"
+    ]
+  },
+  {
+    "Name": "Pisco Sour",
+    "Category": "Cocktail",
+    "Description": "Foamy grape sour with aromatic bitters; expressive yet balanced.",
+    "Recipe": "Pisco 60ml + Lemon Juice 25ml + Simple Syrup 15ml + Egg White",
+    "Energy": 4,
+    "Tension": 4,
+    "Control": 4,
+    "Need": [
+      "celebration",
+      "softness",
+      "confidence"
+    ]
+  },
+  {
+    "Name": "Red Snapper",
+    "Category": "Cocktail",
+    "Description": "Gin-based Bloody Mary variant with sharper botanical edge.",
+    "Recipe": "Gin 50ml + Tomato Juice + Lemon + Spice",
+    "Energy": 3,
+    "Tension": 5,
+    "Control": 3,
+    "Need": [
+      "clarity",
+      "savory depth",
+      "morning reset"
+    ]
+  },
+  {
+    "Name": "Rob Roy",
+    "Category": "Cocktail",
+    "Description": "Scotch-based Manhattan variant with smoky undertones.",
+    "Recipe": "Scotch Whisky 60ml + Sweet Vermouth 30ml + Bitters",
+    "Energy": 2,
+    "Tension": 4,
+    "Control": 5,
+    "Need": [
+      "solitude",
+      "depth",
+      "confidence"
+    ]
+  },
+  {
+    "Name": "Sazerac",
+    "Category": "Cocktail",
+    "Description": "Absinthe-rinsed whiskey cocktail; sharp, aromatic, ritualistic.",
+    "Recipe": "Rye Whiskey 60ml + Sugar + Peychaud's Bitters + Absinthe Rinse",
+    "Energy": 2,
+    "Tension": 4,
+    "Control": 5,
+    "Need": [
+      "ritual",
+      "authority",
+      "focus"
+    ]
+  },
+  {
+    "Name": "Sbagliato",
+    "Category": "Cocktail",
+    "Description": "Negroni variation replacing gin with prosecco for lift.",
+    "Recipe": "Campari 30ml + Sweet Vermouth 30ml + Prosecco",
+    "Energy": 4,
+    "Tension": 4,
+    "Control": 4,
+    "Need": [
+      "surprise",
+      "playfulness",
+      "social confidence"
+    ]
+  },
+  {
+    "Name": "Sidecar",
+    "Category": "Cocktail",
+    "Description": "Brandy sour balancing richness and sharp citrus.",
+    "Recipe": "Cognac 50ml + Lemon Juice 25ml + Triple Sec 20ml",
+    "Energy": 4,
+    "Tension": 4,
+    "Control": 4,
+    "Need": [
+      "elegance",
+      "structure",
+      "confidence"
+    ]
+  },
+  {
+    "Name": "Southside",
+    "Category": "Cocktail",
+    "Description": "Minty gin sour bridging freshness and restraint.",
+    "Recipe": "Gin 60ml + Lime Juice 22ml + Simple Syrup + Mint",
+    "Energy": 4,
+    "Tension": 3,
+    "Control": 4,
+    "Need": [
+      "refresh",
+      "clarity",
+      "ease"
+    ]
+  },
+  {
+    "Name": "Tomato & Basil Collins",
+    "Category": "Cocktail",
+    "Description": "Savory highball combining tomato water, herbs, and carbonation.",
+    "Recipe": "Gin 45ml + Tomato Water + Lemon + Soda",
+    "Energy": 4,
+    "Tension": 4,
+    "Control": 4,
+    "Need": [
+      "refresh",
+      "savory balance",
+      "daytime focus"
+    ]
+  },
+  {
+    "Name": "Tommy's Margarita",
+    "Category": "Cocktail",
+    "Description": "Agave-pure Margarita removing orange liqueur for cleaner structure.",
+    "Recipe": "Tequila Blanco 60ml + Lime Juice 25ml + Agave Syrup 15ml",
+    "Energy": 5,
+    "Tension": 4,
+    "Control": 3,
+    "Need": [
+      "directness",
+      "energy",
+      "modern simplicity"
+    ]
+  },
+  {
+    "Name": "Trinidad Sour",
+    "Category": "Cocktail",
+    "Description": "Bitters-forward modern classic with surprising balance.",
+    "Recipe": "Angostura Bitters 45ml + Orgeat 30ml + Lemon Juice 20ml + Rye Whiskey 15ml",
+    "Energy": 4,
+    "Tension": 5,
+    "Control": 3,
+    "Need": [
+      "boldness",
+      "curiosity",
+      "intensity"
+    ]
+  },
+  {
+    "Name": "Umami Old Fashioned",
+    "Category": "Cocktail",
+    "Description": "Spirit-forward old fashioned with saline or umami enhancement.",
+    "Recipe": "Bourbon 60ml + Sugar + Bitters + Saline Solution",
+    "Energy": 2,
+    "Tension": 4,
+    "Control": 5,
+    "Need": [
+      "depth",
+      "focus",
+      "late-night calm"
+    ]
+  },
+  {
+    "Name": "Vesper",
+    "Category": "Cocktail",
+    "Description": "Strong, dry martini-style cocktail with vodka-gin blend.",
+    "Recipe": "Gin 45ml + Vodka 15ml + Lillet Blanc 7.5ml",
+    "Energy": 3,
+    "Tension": 3,
+    "Control": 5,
+    "Need": [
+      "authority",
+      "confidence",
+      "precision"
+    ]
+  },
+  {
+    "Name": "Vieux Carré",
+    "Category": "Cocktail",
+    "Description": "Complex New Orleans classic blending whiskey, cognac, and fortified wine.",
+    "Recipe": "Rye Whiskey 30ml + Cognac 30ml + Sweet Vermouth 30ml + Benedictine + Bitters",
+    "Energy": 2,
+    "Tension": 4,
+    "Control": 4,
+    "Need": [
+      "depth",
+      "complexity",
+      "evening reflection"
+    ]
+  },
+  {
+    "Name": "Whiskey Sour",
+    "Category": "Cocktail",
+    "Description": "Classic sour with optional egg white softness.",
+    "Recipe": "Bourbon 60ml + Lemon Juice 25ml + Simple Syrup 15ml",
+    "Energy": 4,
+    "Tension": 3,
+    "Control": 4,
+    "Need": [
+      "comfort",
+      "balance",
+      "approachability"
+    ]
+  },
+  {
+    "Name": "Zombie",
+    "Category": "Cocktail",
+    "Description": "High-proof tiki classic with layered rums and citrus.",
+    "Recipe": "Multiple Rums + Lime + Grapefruit + Spices",
+    "Energy": 5,
+    "Tension": 5,
+    "Control": 1,
+    "Need": [
+      "escape",
+      "intensity",
+      "chaos"
+    ]
+  },
+  {
+    "Name": "Amazonian Negroni (Alquímico, Cartagena)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Negroni riff using Amazonian botanicals and local bitters.",
+    "Recipe": "Gin 30ml + Local Bitter 30ml + Sweet Vermouth 30ml",
+    "Energy": 3,
+    "Tension": 5,
+    "Control": 4,
+    "Need": [
+      "exploration",
+      "maturity",
+      "complexity"
+    ]
+  },
+  {
+    "Name": "Antz (Native, Singapore)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Terroir-driven/foraged concept cocktail using local botanicals and unconventional aromatics.",
+    "Recipe": "Local Spirit Base + Antz Infusion + Citrus",
+    "Energy": 3,
+    "Tension": 5,
+    "Control": 3,
+    "Need": [
+      "curiosity",
+      "identity",
+      "experimentation"
+    ]
+  },
+  {
+    "Name": "Aperitivo Martini (Scarfes Bar, London)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Aromatic, art-forward martini with softer bitterness and refined dilution.",
+    "Recipe": "Gin 55ml + Bianco Vermouth 15ml + Orange Bitters",
+    "Energy": 3,
+    "Tension": 3,
+    "Control": 5,
+    "Need": [
+      "elegance",
+      "poise",
+      "assurance"
+    ]
+  },
+  {
+    "Name": "Atlas Martini (Atlas, Singapore)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Gin-forward martini showcasing house vermouth approach; classic luxury framing.",
+    "Recipe": "Gin 60ml + House Vermouth 10ml",
+    "Energy": 3,
+    "Tension": 2,
+    "Control": 5,
+    "Need": [
+      "precision",
+      "luxury",
+      "clarity"
+    ]
+  },
+  {
+    "Name": "Benfiddich Absinthe Frappe (Bar Benfiddich, Tokyo)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Herbal, ritualistic absinthe preparation with Japanese precision.",
+    "Recipe": "Absinthe + Sugar + Crushed Ice",
+    "Energy": 3,
+    "Tension": 5,
+    "Control": 4,
+    "Need": [
+      "ritual",
+      "intensity",
+      "contemplation"
+    ]
+  },
+  {
+    "Name": "Cacao & Salt Old Fashioned (Danico, Paris)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Brown-spirit Old Fashioned accented by cocoa bitterness and saline lift.",
+    "Recipe": "Bourbon 60ml + Demerara Sugar + Chocolate Bitters + Saline",
+    "Energy": 2,
+    "Tension": 4,
+    "Control": 5,
+    "Need": [
+      "depth",
+      "focus",
+      "late-night"
+    ]
+  },
+  {
+    "Name": "Caretaker’s Milk Punch (Caretaker’s Cottage, Melbourne)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Seasonal milk punch using rotating fruits and spices.",
+    "Recipe": "Spirit Base + Seasonal Fruit + Citrus + Milk Clarification",
+    "Energy": 3,
+    "Tension": 3,
+    "Control": 5,
+    "Need": [
+      "comfort",
+      "seasonality",
+      "polish"
+    ]
+  },
+  {
+    "Name": "Carrot Old Fashioned (Little Red Door, Paris)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Vegetable-forward Old Fashioned concept; subtle sweetness with savory depth.",
+    "Recipe": "Cognac 60ml + Carrot Reduction + Bitters",
+    "Energy": 2,
+    "Tension": 4,
+    "Control": 4,
+    "Need": [
+      "novelty",
+      "depth",
+      "comfort"
+    ]
+  },
+  {
+    "Name": "Clarified Milk Punch (Hope & Sesame, Guangzhou)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Asian-flavored clarified punch with tea or spice accents.",
+    "Recipe": "Spirit Base + Citrus + Tea/Spice + Milk Clarification",
+    "Energy": 3,
+    "Tension": 3,
+    "Control": 5,
+    "Need": [
+      "smoothness",
+      "precision",
+      "comfort"
+    ]
+  },
+  {
+    "Name": "Clarified Milk Punch (Little Red Door, Paris)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Narrative-driven milk punch with rotating seasonal produce.",
+    "Recipe": "Spirit Base + Citrus + Sugar + Milk Clarification",
+    "Energy": 3,
+    "Tension": 3,
+    "Control": 5,
+    "Need": [
+      "polish",
+      "storytelling",
+      "comfort"
+    ]
+  },
+  {
+    "Name": "Clarified Piña Colada (Tres Monos, Buenos Aires)",
+    "Category": "Top Bar Cocktail",
+    "Description": "High-proof, clarified tiki reinterpretation with polished texture.",
+    "Recipe": "Rum Blend + Pineapple + Coconut + Milk Clarification",
+    "Energy": 4,
+    "Tension": 4,
+    "Control": 4,
+    "Need": [
+      "indulgence",
+      "precision",
+      "surprise"
+    ]
+  },
+  {
+    "Name": "Clarified Tea Punch (Hope & Sesame, Guangzhou)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Tea-driven clarified punch with Asian spice notes.",
+    "Recipe": "Spirit Base + Tea + Citrus + Milk Clarification",
+    "Energy": 3,
+    "Tension": 3,
+    "Control": 5,
+    "Need": [
+      "smoothness",
+      "precision",
+      "comfort"
+    ]
+  },
+  {
+    "Name": "Cocoa Negroni (Satan’s Whiskers, London)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Dessert-leaning Negroni variant with cocoa bitterness.",
+    "Recipe": "Gin 30ml + Campari 30ml + Cocoa-Infused Vermouth 30ml",
+    "Energy": 3,
+    "Tension": 4,
+    "Control": 4,
+    "Need": [
+      "indulgence",
+      "depth",
+      "late-night"
+    ]
+  },
+  {
+    "Name": "Conceptual Frozen Martini (Paradiso, Barcelona)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Theatrical frozen martini emphasizing temperature and texture.",
+    "Recipe": "Gin 60ml + Dry Vermouth 10ml + Frozen Service",
+    "Energy": 3,
+    "Tension": 3,
+    "Control": 5,
+    "Need": [
+      "spectacle",
+      "precision",
+      "ritual"
+    ]
+  },
+  {
+    "Name": "Connaught Martini (Connaught Bar, London)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Table-side customized martini with house vermouth blend and bitters; ritual and control.",
+    "Recipe": "Gin 60ml + House Vermouth Blend + House Bitters",
+    "Energy": 3,
+    "Tension": 2,
+    "Control": 5,
+    "Need": [
+      "elegance",
+      "control",
+      "assurance"
+    ]
+  },
+  {
+    "Name": "EO Gimlet (Employees Only, New York)",
+    "Category": "Top Bar Cocktail",
+    "Description": "House gimlet spec emphasizing speed, freshness, and high-volume consistency.",
+    "Recipe": "Gin 60ml + Lime Cordial",
+    "Energy": 4,
+    "Tension": 3,
+    "Control": 4,
+    "Need": [
+      "refresh",
+      "efficiency",
+      "social ease"
+    ]
+  },
+  {
+    "Name": "Experimental Tiki (Tres Monos, Buenos Aires)",
+    "Category": "Top Bar Cocktail",
+    "Description": "High-proof tiki with layered rums and acid control.",
+    "Recipe": "Rum Blend + Lime + Tropical Fruit + Spices",
+    "Energy": 5,
+    "Tension": 5,
+    "Control": 2,
+    "Need": [
+      "intensity",
+      "escape",
+      "fun"
+    ]
+  },
+  {
+    "Name": "Fermented Fruit Collins (Himkok, Oslo)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Fermentation-led collins using house ferments.",
+    "Recipe": "Aquavit 45ml + Fermented Fruit + Lemon + Soda",
+    "Energy": 4,
+    "Tension": 4,
+    "Control": 4,
+    "Need": [
+      "freshness",
+      "curiosity",
+      "daytime focus"
+    ]
+  },
+  {
+    "Name": "Guava Negroni (BKK Social Club, Bangkok)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Tropicalized Negroni direction; guava brings soft sweetness against bitter structure.",
+    "Recipe": "Gin 30ml + Campari 30ml + Guava-Infused Vermouth 30ml",
+    "Energy": 3,
+    "Tension": 4,
+    "Control": 4,
+    "Need": [
+      "balance",
+      "tropical ease",
+      "maturity"
+    ]
+  },
+  {
+    "Name": "Herbal Spritz (Locale Firenze, Florence)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Italian low-ABV spritz emphasizing local herbs.",
+    "Recipe": "Herbal Liqueur + Prosecco + Soda",
+    "Energy": 3,
+    "Tension": 3,
+    "Control": 5,
+    "Need": [
+      "restraint",
+      "daytime pleasure",
+      "balance"
+    ]
+  },
+  {
+    "Name": "Hi-Chew Colada (Katana Kitten, New York)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Playful tiki riff with candy-note layering; high fun, lower control by design.",
+    "Recipe": "Rum + Coconut + Pineapple + Candy Infusion",
+    "Energy": 4,
+    "Tension": 4,
+    "Control": 2,
+    "Need": [
+      "playfulness",
+      "nostalgia",
+      "fun"
+    ]
+  },
+  {
+    "Name": "Honey Highball (Himkok, Oslo)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Locally sourced honey and aquavit in a light, carbonated serve.",
+    "Recipe": "Aquavit 45ml + Honey Syrup + Soda",
+    "Energy": 3,
+    "Tension": 3,
+    "Control": 4,
+    "Need": [
+      "local identity",
+      "freshness",
+      "daytime calm"
+    ]
+  },
+  {
+    "Name": "House Negroni (Satan’s Whiskers, London)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Bar-standard Negroni with consistent balance and service speed.",
+    "Recipe": "Gin 30ml + Campari 30ml + Sweet Vermouth 30ml",
+    "Energy": 3,
+    "Tension": 4,
+    "Control": 5,
+    "Need": [
+      "reliability",
+      "confidence",
+      "evening ease"
+    ]
+  },
+  {
+    "Name": "In the Rocks (The Aviary, Chicago)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Aviary theatrical Old Fashioned presentation emphasizing temperature and dilution control.",
+    "Recipe": "Bourbon 60ml + Demerara Sugar + Bitters",
+    "Energy": 2,
+    "Tension": 3,
+    "Control": 5,
+    "Need": [
+      "spectacle",
+      "tradition",
+      "control"
+    ]
+  },
+  {
+    "Name": "Japanese Highball (Kumiko, Chicago)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Ultra-clean whisky highball with precise carbonation.",
+    "Recipe": "Japanese Whisky 45ml + Chilled Soda",
+    "Energy": 3,
+    "Tension": 2,
+    "Control": 5,
+    "Need": [
+      "restraint",
+      "clarity",
+      "long conversation"
+    ]
+  },
+  {
+    "Name": "Kumiko Old Fashioned (Kumiko, Chicago)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Japanese precision framing for an Old Fashioned style; calm and balanced.",
+    "Recipe": "Japanese Whisky 60ml + Sugar + Bitters",
+    "Energy": 2,
+    "Tension": 2,
+    "Control": 5,
+    "Need": [
+      "calm",
+      "focus",
+      "harmony"
+    ]
+  },
+  {
+    "Name": "Low-ABV Spritz (Locale Firenze, Florence)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Daytime Italian spritz emphasizing herbs and restraint.",
+    "Recipe": "Herbal Liqueur + Prosecco + Soda",
+    "Energy": 3,
+    "Tension": 3,
+    "Control": 5,
+    "Need": [
+      "restraint",
+      "balance",
+      "daytime pleasure"
+    ]
+  },
+  {
+    "Name": "Mezcal Spritz (Tlecān, Mexico City)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Low-ABV spritz highlighting smoky agave and herbal bitterness.",
+    "Recipe": "Mezcal 40ml + Aperitivo 40ml + Soda",
+    "Energy": 4,
+    "Tension": 4,
+    "Control": 4,
+    "Need": [
+      "modern ease",
+      "edge",
+      "aperitivo"
+    ]
+  },
+  {
+    "Name": "Milk Punch Moderne (Danico, Paris)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Clarified milk punch approach: smooth texture, softened acidity, polished finish.",
+    "Recipe": "Rum + Citrus + Sugar + Milk Clarification",
+    "Energy": 3,
+    "Tension": 3,
+    "Control": 5,
+    "Need": [
+      "polish",
+      "smoothness",
+      "assurance"
+    ]
+  },
+  {
+    "Name": "Milpa (Tlecān, Mexico City)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Agave-forward cocktail expressing Mexican terroir with corn and herbal notes.",
+    "Recipe": "Tequila or Mezcal 50ml + Corn Distillate + Herbal Tincture + Citrus",
+    "Energy": 3,
+    "Tension": 5,
+    "Control": 4,
+    "Need": [
+      "identity",
+      "depth",
+      "curiosity"
+    ]
+  },
+  {
+    "Name": "Oaxacan Old Fashioned (Handshake Speakeasy, Mexico City)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Handshake Speakeasy signature-leaning Old Fashioned using agave spirits with a smoky, polished profile.",
+    "Recipe": "Mezcal 45ml + Reposado Tequila 15ml + Agave Syrup + Chocolate Bitters",
+    "Energy": 2,
+    "Tension": 4,
+    "Control": 5,
+    "Need": [
+      "depth",
+      "confidence",
+      "late-night focus"
+    ]
+  },
+  {
+    "Name": "One Sip Martini (Tayēr + Elementary, London)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Ultra-concentrated martini designed for a single sip; high intensity and precision.",
+    "Recipe": "High-proof Gin + Concentrated Vermouth Essence",
+    "Energy": 4,
+    "Tension": 3,
+    "Control": 5,
+    "Need": [
+      "intensity",
+      "focus",
+      "minimalism"
+    ]
+  },
+  {
+    "Name": "Panther (Moebius Milano, Milan)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Italian modern classic bridging aperitivo bitterness and spirit depth.",
+    "Recipe": "Italian Bitter + Gin or Whiskey + Fortified Wine",
+    "Energy": 3,
+    "Tension": 4,
+    "Control": 4,
+    "Need": [
+      "style",
+      "confidence",
+      "evening focus"
+    ]
+  },
+  {
+    "Name": "Peranakan (Jigger & Pony, Singapore)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Southeast Asian-inspired profile (pandan/coconut direction), structured and aromatic.",
+    "Recipe": "Gin 45ml + Pandan Infusion + Coconut Clarification",
+    "Energy": 3,
+    "Tension": 4,
+    "Control": 4,
+    "Need": [
+      "identity",
+      "warmth",
+      "curiosity"
+    ]
+  },
+  {
+    "Name": "Pony Old Fashioned (Jigger & Pony, Singapore)",
+    "Category": "Top Bar Cocktail",
+    "Description": "House Old Fashioned emphasizing consistency and service speed.",
+    "Recipe": "Bourbon 60ml + Demerara Sugar + Bitters",
+    "Energy": 2,
+    "Tension": 3,
+    "Control": 5,
+    "Need": [
+      "reliability",
+      "comfort",
+      "confidence"
+    ]
+  },
+  {
+    "Name": "Primordial Soup (Sips, Barcelona)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Sips conceptual drink focusing on savory clarity and aroma-led minimalism.",
+    "Recipe": "Distilled Vodka Base + Clarified Tomato Water + Saline + Aroma Garnish",
+    "Energy": 2,
+    "Tension": 5,
+    "Control": 4,
+    "Need": [
+      "curiosity",
+      "novelty",
+      "intellectual focus"
+    ]
+  },
+  {
+    "Name": "Rice Martini (Zest, Seoul)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Clean martini expression using rice spirit and subtle sweetness.",
+    "Recipe": "Rice Spirit or Vodka 60ml + Dry Vermouth + Rice Sweetness",
+    "Energy": 2,
+    "Tension": 3,
+    "Control": 5,
+    "Need": [
+      "purity",
+      "focus",
+      "restraint"
+    ]
+  },
+  {
+    "Name": "Rum & Coffee Old Fashioned (Baba Au Rum, Athens)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Molasses depth paired with coffee bitterness.",
+    "Recipe": "Aged Rum 60ml + Sugar + Coffee Bitters",
+    "Energy": 3,
+    "Tension": 4,
+    "Control": 4,
+    "Need": [
+      "warmth",
+      "depth",
+      "evening calm"
+    ]
+  },
+  {
+    "Name": "Rum Negroni (Baba Au Rum, Athens)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Rum-focused Negroni highlighting molasses depth.",
+    "Recipe": "Aged Rum 30ml + Campari 30ml + Sweet Vermouth 30ml",
+    "Energy": 3,
+    "Tension": 4,
+    "Control": 4,
+    "Need": [
+      "warmth",
+      "depth",
+      "evening ease"
+    ]
+  },
+  {
+    "Name": "Salted Plum Highball (Line, Athens)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Minimalist highball using salinity and fruit acidity.",
+    "Recipe": "Vodka or Shochu 45ml + Salted Plum + Soda",
+    "Energy": 4,
+    "Tension": 4,
+    "Control": 4,
+    "Need": [
+      "refresh",
+      "clarity",
+      "modern ease"
+    ]
+  },
+  {
+    "Name": "Seasonal Concept Drink (Little Red Door, Paris)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Menu changes quarterly; ingredient-driven narrative cocktail.",
+    "Recipe": "Seasonal Spirit + Produce + House Technique",
+    "Energy": 3,
+    "Tension": 4,
+    "Control": 4,
+    "Need": [
+      "curiosity",
+      "storytelling",
+      "exploration"
+    ]
+  },
+  {
+    "Name": "Seasonal Foraged Sour (Native, Singapore)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Foraged botanicals expressed in a clean sour frame.",
+    "Recipe": "Local Spirit 50ml + Seasonal Citrus 25ml + House Sweetener",
+    "Energy": 4,
+    "Tension": 4,
+    "Control": 4,
+    "Need": [
+      "curiosity",
+      "identity",
+      "freshness"
+    ]
+  },
+  {
+    "Name": "Seasonal Signature (Caretaker’s Cottage, Melbourne)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Market-driven seasonal cocktail with rotating produce.",
+    "Recipe": "Spirit Base + Seasonal Produce + Citrus",
+    "Energy": 3,
+    "Tension": 3,
+    "Control": 4,
+    "Need": [
+      "seasonality",
+      "comfort",
+      "curiosity"
+    ]
+  },
+  {
+    "Name": "Smoked Martini (Moebius Milano, Milan)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Aromatic martini accented with subtle smoke.",
+    "Recipe": "Gin 60ml + Dry Vermouth 10ml + Smoke Rinse",
+    "Energy": 3,
+    "Tension": 4,
+    "Control": 5,
+    "Need": [
+      "authority",
+      "edge",
+      "evening focus"
+    ]
+  },
+  {
+    "Name": "Supercool Martini (Paradiso, Barcelona)",
+    "Category": "Top Bar Cocktail",
+    "Description": "Paradiso sub-zero martini concept: extreme clarity, texture, and dilution control.",
+    "Recipe": "Gin 60ml + Dry Vermouth 10ml + Sub-zero freezing technique",
+    "Energy": 3,
+    "Tension": 3,
+    "Control": 5,
+    "Need": [
+      "precision",
+      "authority",
+      "ritual"
+    ]
+  }
+]
