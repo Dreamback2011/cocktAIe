@@ -1,0 +1,138 @@
+.result-card-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.result-card-content {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.result-title {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card-display {
+  margin-bottom: 2rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 15px;
+  overflow: hidden;
+  background: white;
+}
+
+.card-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-text-content {
+  padding: 2rem;
+  text-align: center;
+}
+
+.cocktail-name {
+  font-size: 2.5rem;
+  color: #667eea;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.card-message {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.8;
+}
+
+.full-response {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #f3f4f6;
+  border-radius: 10px;
+}
+
+.full-response h4 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.full-response p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.cocktail-info {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #f9fafb;
+  border-left: 4px solid #667eea;
+  border-radius: 5px;
+}
+
+.cocktail-info h4 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.cocktail-info p {
+  color: #666;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.result-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.download-button,
+.restart-button {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.download-button {
+  background: #667eea;
+  color: white;
+}
+
+.download-button:hover:not(:disabled) {
+  background: #5568d3;
+  transform: translateY(-2px);
+}
+
+.download-button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.restart-button {
+  background: #10b981;
+  color: white;
+}
+
+.restart-button:hover {
+  background: #059669;
+  transform: translateY(-2px);
+}
