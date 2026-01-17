@@ -118,27 +118,28 @@ class LayoutAgent:
             )
     
     def _simplify_response(self, response_text: str) -> str:
-        """将300字回复简化为2句话，叙事性，避免主语"""
+        """将300字回复简化为1句话，叙事性，避免主语"""
         try:
-            prompt = f"""请将以下回复文本简化为2句话，每句话不超过30字。
+            prompt = f"""请将以下回复文本简化为1句话，不超过35字。
 
 要求：
 1. 采用叙事性表达，避免使用"你"、"我"、"我们"等主语
 2. 用第三人称或客观描述的方式表达
 3. 保持原有情感和正面支持的语气
 4. 保留核心安慰、理解和助兴的内容
-5. 每句话完整且有意义，具有故事感和画面感
-6. 用中文输出，直接用两句话，不需要编号
+5. 句子完整且有意义，具有故事感和画面感
+6. 用中文输出，直接用一句话，不需要编号和句号外的标点
 
 示例风格：
 - "异乡的路途虽然漫长，但每一次的驻足都是成长的痕迹。"
 - "漂泊的灵魂终会在某个转角找到属于自己的温暖。"
 - "孤独不是终点，而是与自己对话的开始。"
+- "沙漠中的夕阳如记忆般温暖，紧握的手传递着永恒的力量。"
 
 原文：
 {response_text}
 
-简化后的两句话（叙事性，无主语）："""
+简化后的一句话（叙事性，无主语，35字以内）："""
             
             simplified = self.llm_service.generate_sync(
                 prompt=prompt,
@@ -152,25 +153,28 @@ class LayoutAgent:
             simplified = simplified.replace('。', '').replace('.', '')
             lines = [line.strip() for line in simplified.split('\n') if line.strip()]
             
-            # 取前两句，每句只加一个句号
-            if len(lines) >= 2:
-                # 确保每句末尾只有一个句号
-                line1 = lines[0].rstrip('。').rstrip('.') + '。'
-                line2 = lines[1].rstrip('。').rstrip('.') + '。'
-                return line1 + line2
-            elif len(lines) == 1:
-                # 单句也确保只有一个句号
-                return lines[0].rstrip('。').rstrip('.') + '。'
+            # 取第一句，确保只有一个句号
+            if len(lines) >= 1:
+                # 确保句末只有一个句号
+                result = lines[0].rstrip('。').rstrip('.') + '。'
+                # 如果结果太长，截取前35个字符
+                if len(result) > 37:  # 35字+句号+少许容差
+                    result = result[:35] + '。'
+                return result
             else:
-                # 如果没有分行，尝试按句号分割
+                # 如果没有分行，尝试按句号分割，取第一句
                 parts = simplified.split('。')
                 parts = [p.strip() for p in parts if p.strip()]
-                if len(parts) >= 2:
-                    return parts[0] + '。' + parts[1] + '。'
-                elif len(parts) == 1:
-                    return parts[0] + '。'
+                if len(parts) >= 1:
+                    result = parts[0].rstrip('。').rstrip('.') + '。'
+                    if len(result) > 37:
+                        result = result[:35] + '。'
+                    return result
                 else:
-                    return simplified.rstrip('。').rstrip('.') + '。'
+                    result = simplified.rstrip('。').rstrip('.') + '。'
+                    if len(result) > 37:
+                        result = result[:35] + '。'
+                    return result
         except Exception as e:
             logger.error(f"文本简化失败: {str(e)}")
             return response_text[:60] + "..."  # 简单截取
@@ -246,8 +250,17 @@ class LayoutAgent:
             font_large = None
             font_medium = None
             
-            # 尝试加载钢笔书法字体（Windows常见路径）
-            calligraphy_fonts = [
+            # 首先尝试项目目录中的字体文件（优先使用LiXuKeShuFa-1.ttf）
+            current_dir = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+            project_fonts = [
+                os.path.join(current_dir, "LiXuKeShuFa-1.ttf"),  # 项目根目录的字体文件（优先）
+                os.path.join(current_dir, "backend", "fonts", "LiXuKeShuFa-1.ttf"),
+                os.path.join(current_dir, "backend", "fonts", "chinese-calligraphy.ttf"),
+                os.path.join(current_dir, "fonts", "chinese-calligraphy.ttf"),
+            ]
+            
+            # 然后尝试系统字体（Windows常见路径）
+            system_fonts = [
                 "C:/Windows/Fonts/STXINGKA.TTF",  # 华文行楷
                 "C:/Windows/Fonts/STKAITI.TTF",   # 华文楷体
                 "C:/Windows/Fonts/STLITI.TTF",    # 华文隶书
@@ -255,35 +268,73 @@ class LayoutAgent:
                 "C:/Windows/Fonts/FZXINGK.TTF",   # 方正行楷
             ]
             
+            # 合并字体路径列表，优先项目字体
+            calligraphy_fonts = project_fonts + system_fonts
+            
             for font_path in calligraphy_fonts:
                 try:
                     if os.path.exists(font_path):
+                        logger.info(f"尝试加载字体: {font_path}")
                         font_large = ImageFont.truetype(font_path, 72)
                         font_medium = ImageFont.truetype(font_path, 32)
-                        logger.info(f"使用钢笔书法字体: {font_path}")
-                        break
-                except:
+                        # 验证字体是否真的加载成功
+                        if font_large is not None and font_medium is not None:
+                            logger.info(f"✓ 成功加载钢笔书法字体: {font_path}")
+                            # 测试字体是否能正确渲染中文
+                            try:
+                                test_bbox = font_large.getbbox("测试")
+                                if test_bbox:
+                                    logger.info(f"✓ 字体验证通过，可以正确渲染中文")
+                            except:
+                                pass  # 如果getbbox不可用，跳过测试
+                            break
+                        else:
+                            logger.warning(f"字体加载返回None: {font_path}")
+                            font_large = None
+                            font_medium = None
+                except Exception as e:
+                    logger.warning(f"字体加载失败 {font_path}: {str(e)}")
+                    font_large = None
+                    font_medium = None
                     continue
             
             # 如果没有找到书法字体，使用系统默认中文字体
-            if font_large is None:
+            if font_large is None or font_medium is None:
+                logger.warning("未能加载书法字体，尝试加载系统字体...")
                 try:
                     # Windows系统字体路径
-                    font_large = ImageFont.truetype("C:/Windows/Fonts/simhei.ttf", 72)
-                    font_medium = ImageFont.truetype("C:/Windows/Fonts/simhei.ttf", 32)
-                    logger.info("使用黑体字体")
-                except:
+                    if os.path.exists("C:/Windows/Fonts/simhei.ttf"):
+                        font_large = ImageFont.truetype("C:/Windows/Fonts/simhei.ttf", 72)
+                        font_medium = ImageFont.truetype("C:/Windows/Fonts/simhei.ttf", 32)
+                        logger.info("使用黑体字体")
+                    elif os.path.exists("C:/Windows/Fonts/msyh.ttc"):
+                        font_large = ImageFont.truetype("C:/Windows/Fonts/msyh.ttc", 72)
+                        font_medium = ImageFont.truetype("C:/Windows/Fonts/msyh.ttc", 32)
+                        logger.info("使用微软雅黑字体")
+                    else:
+                        raise FileNotFoundError("未找到系统字体")
+                except Exception as e1:
+                    logger.warning(f"Windows字体加载失败: {str(e1)}")
                     try:
                         # macOS系统字体路径
-                        font_large = ImageFont.truetype("/System/Library/Fonts/PingFang.ttc", 72)
-                        font_medium = ImageFont.truetype("/System/Library/Fonts/PingFang.ttc", 32)
-                    except:
+                        if os.path.exists("/System/Library/Fonts/PingFang.ttc"):
+                            font_large = ImageFont.truetype("/System/Library/Fonts/PingFang.ttc", 72)
+                            font_medium = ImageFont.truetype("/System/Library/Fonts/PingFang.ttc", 32)
+                            logger.info("使用苹方字体")
+                        else:
+                            raise FileNotFoundError("未找到系统字体")
+                    except Exception as e2:
+                        logger.error(f"所有字体加载失败: {str(e2)}")
                         # 使用默认字体
                         font_large = ImageFont.load_default()
                         font_medium = ImageFont.load_default()
                         logger.warning("使用默认字体（可能不支持中文）")
             
-            # 绘制鸡尾酒名称（右半部分，垂直居中偏上）
+            # 绘制鸡尾酒名称（右半部分，垂直居中偏上）- 确保使用字体
+            if font_large is None:
+                logger.error("名称字体未加载，使用默认字体")
+                font_large = ImageFont.load_default()
+            
             name_bbox = draw.textbbox((0, 0), cocktail_name, font=font_large)
             name_width = name_bbox[2] - name_bbox[0]
             name_x = right_start + (right_width - name_width) // 2  # 右半部分居中
@@ -340,7 +391,12 @@ class LayoutAgent:
             total_text_height = len(text_lines) * line_height
             start_y = text_area_start_y + (text_area_height - total_text_height) // 2  # 垂直居中
             
-            # 绘制文本（每行居中）
+            # 绘制文本（每行居中）- 确保使用字体
+            # 确保font_medium不为None
+            if font_medium is None:
+                logger.error("正文字体未加载，使用默认字体绘制文本")
+                font_medium = ImageFont.load_default()
+            
             for i, line in enumerate(text_lines):
                 if not line.strip():
                     continue
@@ -349,6 +405,10 @@ class LayoutAgent:
                 line_x = right_start + (right_width - line_width) // 2  # 每行居中
                 line_y = start_y + i * line_height
                 draw.text((line_x, line_y), line.strip(), fill='black', font=font_medium)
+            
+            # 验证字体使用情况（记录使用的字体）
+            font_info = "黑体" if "simhei" in str(font_large) or "simhei" in str(font_medium) else "书法字体" if font_large else "默认字体"
+            logger.info(f"名片文字绘制完成 - 使用字体: {font_info} (名称), {font_info} (正文)")
             
             # 保存卡片
             import uuid

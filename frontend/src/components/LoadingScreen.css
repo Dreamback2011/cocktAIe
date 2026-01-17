@@ -38,8 +38,30 @@
 .progress-fill {
   height: 100%;
   background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-  transition: width 0.3s ease;
+  transition: width 0.6s ease-out;
   border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 .progress-text {
@@ -52,6 +74,69 @@
 .current-step {
   color: #666;
   font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.progress-details {
+  margin-top: 1.5rem;
+  text-align: left;
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: 10px;
+}
+
+.progress-detail-item {
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.progress-detail-item.pending {
+  opacity: 0.6;
+}
+
+.progress-detail-item.in_progress {
+  font-weight: 500;
+}
+
+.progress-detail-item.completed {
+  color: #10b981;
+}
+
+.progress-detail-item.failed {
+  color: #ef4444;
+}
+
+.detail-label {
+  min-width: 100px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.detail-status {
+  font-size: 1.2rem;
+  width: 1.5rem;
+  text-align: center;
+}
+
+.detail-step {
+  flex: 1;
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+.detail-substep {
+  color: #9ca3af;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+.detail-result {
+  color: #667eea;
+  font-weight: 500;
+  margin-left: 0.5rem;
 }
 
 .response-preview {

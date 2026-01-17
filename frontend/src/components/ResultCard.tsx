@@ -133,18 +133,13 @@ const ResultCard: React.FC<ResultCardProps> = ({ result, onRestart }) => {
             </div>
           )}
           
-          <div className="card-text-content">
-            <h3 className="cocktail-name">{cocktailName}</h3>
-            <p className="card-message">{simplifiedResponse}</p>
-          </div>
+          {/* 图片下方显示完整回复 */}
+          {result.presentation?.user_response && (
+            <div className="full-response">
+              <p>{result.presentation.user_response}</p>
+            </div>
+          )}
         </div>
-
-        {result.presentation?.user_response && (
-          <div className="full-response">
-            <h4>完整回复：</h4>
-            <p>{result.presentation.user_response}</p>
-          </div>
-        )}
 
         {result.cocktail_mix && (
           <div className="cocktail-info">

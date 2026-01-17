@@ -83,15 +83,31 @@ class PresentationAgent:
         try:
             # 任务1：生成四字中文名（同步）
             if progress_callback:
-                progress_callback({"step": "生成鸡尾酒名称", "progress": 65})
+                progress_callback({
+                    "step": "生成鸡尾酒名称",
+                    "progress": 65,
+                    "details": {
+                        "text_generation": {"status": "in_progress", "progress": 30, "step": "生成名称中..."}
+                    }
+                })
             cocktail_name, name_candidates = self._generate_cocktail_name(
                 semantic_output=semantic_output,
                 cocktail_output=cocktail_output
             )
             logger.info(f"生成鸡尾酒名称: {cocktail_name}")
+            if progress_callback:
+                progress_callback({
+                    "step": "鸡尾酒名称生成完成",
+                    "progress": 67,
+                    "details": {
+                        "text_generation": {"status": "completed", "progress": 100, "step": "名称已生成", "result": cocktail_name}
+                    }
+                })
             
-            # 生成鸡尾酒图片
+            # 只生成一张图片（使用最终呈现图片标准）
             cocktail_image_url = None
+            final_presentation_image_url = None
+            
             # 检查是否有任何可用的图片服务
             has_image_service = (
                 (self.dalle_image_service and self.dalle_image_service.available) or
@@ -102,71 +118,154 @@ class PresentationAgent:
             if has_image_service:
                 try:
                     if progress_callback:
-                        progress_callback({"step": "正在生成鸡尾酒图片（可能需要15-20秒）...", "progress": 70})
-                    logger.info("开始生成鸡尾酒图片...")
-                    cocktail_image_url = self._generate_cocktail_image(
-                        cocktail_name=cocktail_name,
-                        cocktail_output=cocktail_output
-                    )
-                    if cocktail_image_url:
-                        if progress_callback:
-                            progress_callback({"step": "鸡尾酒图片生成完成", "progress": 72})
-                        logger.info(f"鸡尾酒图片生成成功: {cocktail_image_url}")
-                    else:
-                        if progress_callback:
-                            progress_callback({"step": "鸡尾酒图片生成失败，继续处理", "progress": 72})
-                        logger.warning("鸡尾酒图片生成返回None")
-                except Exception as e:
-                    logger.warning(f"鸡尾酒图片生成失败: {str(e)}")
+                        progress_callback({
+                            "step": "正在生成鸡尾酒图片（可能需要15-20秒）...",
+                            "progress": 70,
+                            "details": {
+                                "image_generation": {
+                                    "status": "in_progress",
+                                    "progress": 10,
+                                    "step": "生成鸡尾酒图片中...",
+                                    "cocktail_image": "in_progress",
+                                    "final_image": "in_progress"  # 使用同一张图片
+                                }
+                            }
+                        })
+                    logger.info("开始生成鸡尾酒图片（使用最终呈现图片标准，基于recipe）...")
+                    
+                    # Checker 4: 图片生成中（调配中）- 基于recipe生成
                     if progress_callback:
-                        progress_callback({"step": "鸡尾酒图片生成失败，继续处理", "progress": 72})
-            else:
-                logger.info("图像服务不可用，跳过图片生成")
-                if progress_callback:
-                    progress_callback({"step": "跳过图片生成（服务不可用）", "progress": 72})
-            
-            # 生成最终呈现图片
-            final_presentation_image_url = None
-            if has_image_service:
-                try:
-                    if progress_callback:
-                        progress_callback({"step": "正在生成最终呈现图片（可能需要15-20秒）...", "progress": 75})
-                    logger.info("开始生成最终呈现图片...")
+                        progress_callback({
+                            "step": "正在生成鸡尾酒图片（基于recipe）...",
+                            "progress": 73,
+                            "details": {
+                                "image_generation": {
+                                    "status": "in_progress",
+                                    "progress": 20,
+                                    "step": "基于recipe准备图片生成...",
+                                    "cocktail_image": "in_progress",
+                                    "final_image": "in_progress"
+                                }
+                            }
+                        })
+                    
+                    # 只生成一张图片，使用最终呈现图片的标准（使用cocktail_output.customized_recipe）
                     final_presentation_image_url = self._generate_final_presentation_image(
                         cocktail_name=cocktail_name,
                         cocktail_output=cocktail_output
                     )
-                    if final_presentation_image_url:
-                        if progress_callback:
-                            progress_callback({"step": "最终呈现图片生成完成", "progress": 77})
-                        logger.info(f"最终呈现图片生成成功: {final_presentation_image_url}")
-                    else:
-                        # 使用鸡尾酒图片作为备选
-                        final_presentation_image_url = cocktail_image_url
-                        if progress_callback:
-                            progress_callback({"step": "使用备选图片", "progress": 77})
-                        logger.info("最终呈现图片生成失败，使用鸡尾酒图片作为备选")
-                except Exception as e:
-                    logger.warning(f"最终呈现图片生成失败: {str(e)}")
-                    # 使用鸡尾酒图片作为备选
-                    final_presentation_image_url = cocktail_image_url
+                    
+                    # 生成过程中更新进度
                     if progress_callback:
-                        progress_callback({"step": "使用备选图片", "progress": 77})
+                        if final_presentation_image_url:
+                            # Checker 5: 图片生成完毕
+                            progress_callback({
+                                "step": "图片生成完成",
+                                "progress": 77,
+                                "details": {
+                                    "image_generation": {
+                                        "status": "in_progress",
+                                        "progress": 80,
+                                        "step": "图片已生成，准备排版...",
+                                        "cocktail_image": "completed",
+                                        "final_image": "completed"
+                                    }
+                                }
+                            })
+                        else:
+                            progress_callback({
+                                "step": "图片生成失败",
+                                "progress": 77,
+                                "details": {
+                                    "image_generation": {
+                                        "status": "failed",
+                                        "progress": 0,
+                                        "step": "图片生成失败",
+                                        "cocktail_image": "failed",
+                                        "final_image": "failed"
+                                    }
+                                }
+                            })
+                    
+                    # 使用同一张图片填充两个字段
+                    if final_presentation_image_url:
+                        cocktail_image_url = final_presentation_image_url  # 使用同一张图片
+                        if progress_callback:
+                            progress_callback({
+                                "step": "图片生成完成",
+                                "progress": 77,
+                                "details": {
+                                    "image_generation": {
+                                        "status": "completed",
+                                        "progress": 100,
+                                        "step": "图片已生成完成",
+                                        "cocktail_image": "completed",
+                                        "final_image": "completed"
+                                    }
+                                }
+                            })
+                        logger.info(f"图片生成成功: {final_presentation_image_url}")
+                    else:
+                        if progress_callback:
+                            progress_callback({
+                                "step": "图片生成失败",
+                                "progress": 77,
+                                "details": {
+                                    "image_generation": {
+                                        "status": "failed",
+                                        "progress": 0,
+                                        "step": "图片生成失败",
+                                        "cocktail_image": "failed",
+                                        "final_image": "failed"
+                                    }
+                                }
+                            })
+                        logger.warning("图片生成返回None")
+                except Exception as e:
+                    logger.warning(f"图片生成失败: {str(e)}")
+                    if progress_callback:
+                        progress_callback({
+                            "step": "图片生成失败，继续处理",
+                            "progress": 77,
+                            "details": {
+                                "image_generation": {
+                                    "status": "failed",
+                                    "progress": 0,
+                                    "step": f"图片生成失败: {str(e)[:50]}...",
+                                    "cocktail_image": "failed",
+                                    "final_image": "failed"
+                                }
+                            }
+                        })
             else:
-                logger.info("图像服务不可用，跳过最终呈现图片生成")
+                logger.info("图像服务不可用，跳过图片生成")
+                if progress_callback:
+                    progress_callback({
+                        "step": "跳过图片生成（服务不可用）",
+                        "progress": 77,
+                        "details": {
+                            "image_generation": {
+                                "status": "failed",
+                                "progress": 0,
+                                "step": "图片服务不可用",
+                                "cocktail_image": "failed",
+                                "final_image": "failed"
+                            }
+                        }
+                    })
             
             # 视频生成（可选，需要基础图片，如果失败不影响整体流程）
             # 注意：视频生成在图片生成之后，但在返回结果之前完成
             production_video_url = None
-            if self.video_service and cocktail_image_url:
+            if self.video_service and final_presentation_image_url:  # 使用最终呈现图片
                 try:
                     if progress_callback:
                         progress_callback({"step": "生成制作视频", "progress": 77})
-                    logger.info(f"开始生成制作视频，基于图片: {cocktail_image_url}")
+                    logger.info(f"开始生成制作视频，基于图片: {final_presentation_image_url}")
                     production_video_url = self._generate_production_video(
                         cocktail_name=cocktail_name,
                         cocktail_output=cocktail_output,
-                        base_image_url=cocktail_image_url
+                        base_image_url=final_presentation_image_url  # 使用最终呈现图片
                     )
                     if production_video_url:
                         logger.info(f"视频生成成功: {production_video_url}")
@@ -184,7 +283,7 @@ class PresentationAgent:
             else:
                 if not self.video_service:
                     logger.info("视频服务不可用，跳过视频生成")
-                elif not cocktail_image_url:
+                elif not final_presentation_image_url:
                     logger.info("无基础图片，跳过视频生成")
                 if progress_callback:
                     progress_callback({"step": "准备排版", "progress": 78})
@@ -296,7 +395,8 @@ class PresentationAgent:
         if not self.video_service:
             return None
         try:
-            prompt = f"A bartender's hands gracefully preparing a {cocktail_name} cocktail, mixing ingredients in a cocktail shaker, pouring into an elegant glass, cinematic lighting, smooth motion, professional bartending technique"
+            # 视频生成也不包含酒名
+            prompt = "A bartender's hands gracefully preparing a cocktail, mixing ingredients in a cocktail shaker, pouring into an elegant glass, cinematic lighting, smooth motion, professional bartending technique"
             
             # 使用Replicate Stable Video Diffusion生成视频
             # 需要基础图片URL，基于图片生成视频
@@ -315,189 +415,14 @@ class PresentationAgent:
         cocktail_name: str,
         cocktail_output: CocktailMixOutput
     ) -> Optional[str]:
-        """生成鸡尾酒图片（优先级: DALL-E > Grok > Replicate）
-        根据鸡尾酒的实际配方和特征生成真实的鸡尾酒照片
+        """生成鸡尾酒图片（使用与最终呈现图片相同的标准）
+        所有关于酒的图片都按照最终呈现图片的标准生成，不包含酒名
         """
-        # 构建基于实际配方的详细提示词
-        recipe = cocktail_output.customized_recipe
-        description = cocktail_output.customized_description
-        
-        # 分析配方，提取关键视觉元素
-        recipe_lower = recipe.lower()
-        description_lower = description.lower()
-        
-        # 推断杯子类型
-        glass_type = "elegant cocktail glass"
-        if "martini" in recipe_lower or "martini" in description_lower:
-            glass_type = "martini glass"
-        elif "old fashioned" in recipe_lower or "rocks" in recipe_lower:
-            glass_type = "old fashioned glass"
-        elif "highball" in recipe_lower or "tall" in recipe_lower:
-            glass_type = "highball glass"
-        elif "champagne" in recipe_lower or "flute" in recipe_lower:
-            glass_type = "champagne flute"
-        
-        # 根据配方详细分析鸡尾酒的颜色特征
-        # 分析基础酒和调制剂的组合颜色
-        base_colors = []
-        modifier_colors = []
-        
-        # 基础酒颜色（按优先级匹配）
-        if "dark rum" in recipe_lower:
-            base_colors.append("deep golden amber")
-        elif "rum" in recipe_lower:
-            base_colors.append("golden amber or caramel")
-        if "whiskey" in recipe_lower or "whisky" in recipe_lower or "bourbon" in recipe_lower or "scotch" in recipe_lower:
-            base_colors.append("rich amber brown")
-        if "gin" in recipe_lower:
-            base_colors.append("crystal clear")
-        if "vodka" in recipe_lower:
-            base_colors.append("clear transparent")
-        if "tequila" in recipe_lower:
-            base_colors.append("crystal clear or pale golden")
-        if "campari" in recipe_lower:
-            base_colors.append("vibrant deep red")
-        if "aperol" in recipe_lower:
-            base_colors.append("vibrant orange-red")
-        if "sweet vermouth" in recipe_lower:
-            base_colors.append("amber red")
-        elif "vermouth" in recipe_lower:
-            base_colors.append("pale golden")
-        
-        # 调制剂颜色（可以多个）
-        if "cola" in recipe_lower or "coca cola" in recipe_lower:
-            modifier_colors.append("dark caramel brown")
-        if "lemon" in recipe_lower or "lemon juice" in recipe_lower:
-            modifier_colors.append("citrus yellow tint")
-        if "lime" in recipe_lower or "lime juice" in recipe_lower:
-            modifier_colors.append("citrus yellow-green tint")
-        if "orange" in recipe_lower or "orange juice" in recipe_lower:
-            modifier_colors.append("vibrant orange tint")
-        if "cranberry" in recipe_lower or "cranberry juice" in recipe_lower:
-            modifier_colors.append("deep red tint")
-        if "grapefruit" in recipe_lower:
-            modifier_colors.append("pink-red tint")
-        if "sherry" in recipe_lower or "amontillado" in recipe_lower:
-            modifier_colors.append("amber-golden depth")
-        if "chocolate bitters" in recipe_lower or "chocolate" in recipe_lower or "cacao" in recipe_lower:
-            modifier_colors.append("dark brown richness")
-        if "tonic" in recipe_lower:
-            modifier_colors.append("clear with subtle quinine yellow")
-        if "bitters" in recipe_lower and "chocolate" not in recipe_lower:
-            modifier_colors.append("aromatic brown depth")
-        
-        # 组合颜色描述（详细描述混合后的颜色）
-        if base_colors and modifier_colors:
-            # 多个调制剂时，描述组合效果
-            if len(modifier_colors) > 1:
-                modifiers = " and ".join(modifier_colors)
-                color_desc = f"{base_colors[0]} mixed with {modifiers}, creating a rich and complex blended hue"
-            else:
-                color_desc = f"{base_colors[0]} mixed with {modifier_colors[0]}, creating a unique blended hue"
-        elif base_colors:
-            color_desc = base_colors[0]
-            if "clear" in color_desc.lower() or "transparent" in color_desc.lower():
-                color_desc += " with subtle natural tints"
-        elif modifier_colors:
-            if len(modifier_colors) > 1:
-                color_desc = f"blended from {', '.join(modifier_colors)}, creating a vibrant mixture"
-            else:
-                color_desc = modifier_colors[0]
-        else:
-            # 如果无法识别，使用通用描述但强调颜色
-            color_desc = "beautifully colored with rich natural tones"
-        
-        # 添加颜色深度和透明度描述
-        if "cola" in recipe_lower or "dark rum" in recipe_lower or "chocolate" in recipe_lower:
-            color_desc += " with rich, deep color depth and natural translucency"
-        elif "clear" in color_desc.lower() or "transparent" in color_desc.lower():
-            color_desc += " with subtle color tints and clarity"
-        elif "vibrant" in color_desc.lower() or "red" in color_desc.lower() or "orange" in color_desc.lower():
-            color_desc += " with bright color vibrancy"
-        else:
-            color_desc += " with natural color vibrancy and depth"
-        
-        # 推断装饰物
-        garnish = ""
-        if "lime" in recipe_lower:
-            garnish = "with a fresh lime wheel or wedge"
-        elif "lemon" in recipe_lower:
-            garnish = "with a lemon twist or slice"
-        elif "orange" in recipe_lower:
-            garnish = "with an orange peel or slice"
-        elif "mint" in recipe_lower:
-            garnish = "with fresh mint leaves"
-        elif "cherry" in recipe_lower:
-            garnish = "with a maraschino cherry"
-        
-        # 构建详细的视觉描述提示词，以鸡尾酒为中心，手在后方
-        # 推断高级酒杯类型
-        premium_glass = "premium crystal glass"  # 默认高级水晶杯
-        if "martini" in recipe_lower:
-            premium_glass = "premium crystal martini glass"
-        elif "old fashioned" in recipe_lower:
-            premium_glass = "premium cut crystal old fashioned glass"
-        elif "highball" in recipe_lower or "tall" in recipe_lower:
-            premium_glass = "premium crystal highball glass with elegant design"
-        elif "champagne" in recipe_lower or "flute" in recipe_lower:
-            premium_glass = "premium crystal champagne flute"
-        
-        # 随机选择高级杯子类型（增加多样性）
-        import random
-        glass_styles = [
-            "premium cut crystal glass with faceted edges",
-            "sophisticated colored glass (amber, cobalt blue, or emerald green)",
-            "premium borosilicate glass with elegant stem",
-            "artisanal hand-blown glass with unique texture",
-            "luxury crystal glass with intricate design patterns"
-        ]
-        if random.random() < 0.3:  # 30%概率使用有色玻璃
-            premium_glass = random.choice(glass_styles)
-        
-        # 精简提示词，控制在1024字符以内
-        accessories = f"straw, geometric ice cubes, decorative pick with {garnish.split()[-1] if garnish else 'fruit slices'}"
-        
-        prompt = f"""Premium {cocktail_name} cocktail, {color_desc}, in {premium_glass} on wooden bar. 
-Bartender hands BEHIND glass, not blocking. Cocktail is center focus showing {color_desc} from recipe: {recipe}. 
-Fresh drinkable beverage with realistic mixing. Accessories: {accessories}. 
-Glass shows condensation, realistic bubbles. Hands visible in background, cocktail unobstructed. 
-Professional food photography, soft lighting, shallow depth, photorealistic, 8k quality."""
-        
-        # 优先级1: 尝试DALL-E图片生成
-        if self.dalle_image_service and self.dalle_image_service.available:
-            try:
-                logger.info("使用DALL-E图片生成服务生成鸡尾酒图片")
-                image_url = self.dalle_image_service.generate_image_sync(prompt=prompt)
-                if image_url:
-                    return image_url
-            except Exception as e:
-                logger.warning(f"DALL-E图片生成失败: {str(e)}，尝试Grok")
-        
-        # 优先级2: 尝试Grok图片生成
-        if self.grok_image_service and self.grok_image_service.available:
-            try:
-                logger.info("使用Grok图片生成服务生成鸡尾酒图片")
-                image_url = self.grok_image_service.generate_image_sync(prompt=prompt, n=1)
-                if image_url:
-                    return image_url
-            except Exception as e:
-                logger.warning(f"Grok图片生成失败: {str(e)}，尝试Replicate")
-        
-        # 优先级3: 备选使用Replicate（如果可用）
-        if self.image_service and self.image_service.client is not None:
-            try:
-                logger.info("使用Replicate图片生成服务生成鸡尾酒图片")
-                image_url = self.image_service.generate_image_sync(
-                    prompt=prompt,
-                    width=1024,
-                    height=1024
-                )
-                return image_url
-            except Exception as e:
-                logger.error(f"Replicate鸡尾酒图片生成失败: {str(e)}")
-        
-        logger.warning("所有图片生成服务都不可用，跳过鸡尾酒图片生成")
-        return None
+        # 直接使用与最终呈现图片相同的生成逻辑，确保统一标准
+        return self._generate_final_presentation_image(
+            cocktail_name=cocktail_name,  # 虽然不传入prompt，但保留参数签名
+            cocktail_output=cocktail_output
+        )
     
     def _generate_final_presentation_image(
         self,
@@ -523,30 +448,90 @@ Professional food photography, soft lighting, shallow depth, photorealistic, 8k 
         glass_styles = [
             "premium cut crystal glass with faceted edges",
             "sophisticated colored glass (amber, cobalt blue, or emerald green)",
-            "premium borosilicate glass with elegant stem"
+            "premium borosilicate glass with elegant stem",
+            "hand-blown artisanal glass with unique texture",
+            "luxury crystal martini glass with gold rim",
+            "modern geometric glass with clean lines",
+            "vintage-inspired glass with decorative etching"
         ]
-        if random.random() < 0.3:
+        # 增加使用有色/特殊玻璃的概率到50%，提高视觉多样性
+        if random.random() < 0.5:
             premium_glass = random.choice(glass_styles)
         
-        # 推断装饰物
-        garnish_desc = ""
+        # 增加装饰物多样性，避免总是橙色+橘子切片
+        garnish_options = []
+        
+        # 根据配方推断可能的装饰物
         if "lime" in recipe_lower:
-            garnish_desc = "lime wheel on decorative pick"
-        elif "lemon" in recipe_lower:
-            garnish_desc = "lemon twist and slice on decorative pick"
-        elif "orange" in recipe_lower:
-            garnish_desc = "orange slice and peel on decorative pick"
-        elif "mint" in recipe_lower:
-            garnish_desc = "fresh mint leaves and fruit slice on decorative pick"
-        elif "cherry" in recipe_lower:
-            garnish_desc = "maraschino cherry and citrus slice on decorative pick"
-        else:
-            garnish_desc = "elegant fruit slices on decorative cocktail pick"
+            garnish_options.extend([
+                "lime wheel on decorative pick",
+                "lime wedge with fresh mint",
+                "lime zest twist",
+                "thin lime slice floating"
+            ])
+        if "lemon" in recipe_lower:
+            garnish_options.extend([
+                "lemon twist and slice on decorative pick",
+                "lemon peel spiral",
+                "lemon wheel with fresh herbs",
+                "candied lemon slice"
+            ])
+        if "orange" in recipe_lower:
+            garnish_options.extend([
+                "orange slice and peel on decorative pick",
+                "orange zest curl",
+                "candied orange peel",
+                "fresh orange wheel"
+            ])
+        if "mint" in recipe_lower:
+            garnish_options.extend([
+                "fresh mint leaves and fruit slice on decorative pick",
+                "mint sprig bouquet",
+                "muddled mint with berries",
+                "fresh mint crown"
+            ])
+        if "cherry" in recipe_lower:
+            garnish_options.extend([
+                "maraschino cherry and citrus slice on decorative pick",
+                "brandied cherry with stem",
+                "fresh cherry with lime twist",
+                "cherry and orange flag"
+            ])
+        if "berry" in recipe_lower or "cranberry" in recipe_lower:
+            garnish_options.extend([
+                "fresh berries on decorative pick",
+                "cranberry and lime wheel",
+                "mixed berry skewer",
+                "raspberry and mint"
+            ])
+        if "herb" in recipe_lower or "basil" in recipe_lower or "rosemary" in recipe_lower:
+            garnish_options.extend([
+                "fresh herb sprig",
+                "herb bouquet",
+                "herb and citrus twist"
+            ])
+        
+        # 如果没有特定装饰物，随机选择通用装饰物
+        if not garnish_options:
+            garnish_options = [
+                "elegant fruit slice on decorative cocktail pick",
+                "fresh citrus twist",
+                "herb sprig with berries",
+                "decorative edible flower",
+                "candied fruit peel",
+                "fresh mint sprig",
+                "simple lemon twist",
+                "berry and mint garnish"
+            ]
+        
+        # 随机选择装饰物（增加多样性）
+        garnish_desc = random.choice(garnish_options)
         
         # 精简提示词，控制在1024字符以内
-        accessories = f"thin straw, geometric ice, decorative pick with {garnish_desc.split('on')[0] if 'on' in garnish_desc else garnish_desc}"
+        accessories = f"thin straw, geometric ice, {garnish_desc}"
         
-        prompt = f"""Premium {cocktail_name} cocktail as central focus in {premium_glass} on wooden bar. 
+        # 最终呈现图片标准（简洁、特写、不包含酒名）
+        prompt = f"""Premium cocktail as central focus in {premium_glass} on wooden bar. 
 Hands BEHIND glass, never blocking. Cocktail shows realistic color from recipe: {recipe}. 
 Fresh drinkable beverage. Accessories: {accessories}. 
 Glass shows luxury design. Hands in background create depth. 

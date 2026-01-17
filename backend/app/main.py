@@ -159,10 +159,16 @@ async def get_process_status(task_id: str):
         # 返回部分结果，让前端可以提前显示已生成的内容
         partial_result = result
     
+    # 从result.progress中提取progress_details
+    progress_details = {}
+    if isinstance(result.progress, dict):
+        progress_details = result.progress.get('progress_details', {})
+    
     return ProcessStatusResponse(
         task_id=task_id,
         status=result.status,
-        progress=result.progress,
+        progress=result.progress if isinstance(result.progress, dict) else {},
+        progress_details=progress_details,
         result=partial_result
     )
 

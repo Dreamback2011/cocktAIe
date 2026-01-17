@@ -19,10 +19,13 @@ class CocktailAgent:
     def __init__(self):
         self.cocktail_db = get_cocktail_db()
         self.llm_service = get_llm_service()
+        # 推荐历史记录（session-based，key为session_id，value为鸡尾酒名称列表）
+        self._recommendation_history: Dict[str, List[str]] = {}
     
     def mix_cocktail(
         self,
-        semantic_output: SemanticAnalysisOutput
+        semantic_output: SemanticAnalysisOutput,
+        session_id: Optional[str] = None
     ) -> CocktailMixOutput:
         """
         根据语义分析结果调配鸡尾酒
@@ -34,21 +37,45 @@ class CocktailAgent:
             CocktailMixOutput: 鸡尾酒调配结果
         """
         try:
-            # 步骤1：基础匹配
+            # 获取推荐历史（对已推荐的鸡尾酒降权）
+            used_cocktails = None
+            if session_id and session_id in self._recommendation_history:
+                used_cocktails = self._recommendation_history[session_id][-10:]  # 最近10次推荐
+            
+            # 步骤1：基础匹配（使用改进的推荐算法，支持多样性和灵活权重）
             best_matches = self.cocktail_db.find_best_match(
                 energy=semantic_output.energy,
                 tension=semantic_output.tension,
                 control=semantic_output.control,
                 needs=semantic_output.needs,
-                top_k=1
+                top_k=1,
+                energy_weight=1.0,  # 默认权重，可根据需要调整
+                tension_weight=1.0,
+                control_weight=1.0,
+                need_weight=1.5,  # 降低需求匹配权重（从2.5降到1.5）
+                diversity_bonus=0.4,  # 增加多样性奖励（从0.35提高到0.4）
+                used_cocktails=used_cocktails,  # 传入已使用的鸡尾酒列表以降低权重
+                enable_randomization=True,  # 启用Top-K随机化
+                random_seed=None  # 不设置seed，确保每次随机
             )
             
             if not best_matches:
                 raise Exception("未能找到匹配的鸡尾酒")
             
             base_cocktail_data = best_matches[0]['cocktail']
+            selected_cocktail_name = base_cocktail_data.get('Name', '')
+            
+            # 更新推荐历史
+            if session_id:
+                if session_id not in self._recommendation_history:
+                    self._recommendation_history[session_id] = []
+                self._recommendation_history[session_id].append(selected_cocktail_name)
+                # 只保留最近20次推荐记录
+                if len(self._recommendation_history[session_id]) > 20:
+                    self._recommendation_history[session_id] = self._recommendation_history[session_id][-20:]
+            
             base_cocktail = BaseCocktail(
-                name=base_cocktail_data.get('Name', ''),
+                name=selected_cocktail_name,
                 recipe=base_cocktail_data.get('Recipe', ''),
                 description=base_cocktail_data.get('Description', '')
             )

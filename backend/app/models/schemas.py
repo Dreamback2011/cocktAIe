@@ -70,6 +70,8 @@ class ProcessingResult(BaseModel):
     layout: Optional[LayoutOutput] = None
     error: Optional[str] = None
     progress: Dict[str, Any] = {}
+    # 详细进度追踪
+    progress_details: Dict[str, Any] = {}  # 包含各阶段的详细进度信息
 
 
 # API请求/响应模型
@@ -92,4 +94,5 @@ class ProcessStatusResponse(BaseModel):
     task_id: str
     status: TaskStatus
     progress: Dict[str, Any]
+    progress_details: Dict[str, Any] = {}  # 添加progress_details字段
     result: Optional[ProcessingResult] = None
